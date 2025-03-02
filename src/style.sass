@@ -2,13 +2,16 @@ $primary-color: #5d4037
 $secondary-color: #f4f4f4
 $text-color: #333
 $default-padding: 1rem
+$fa-font-path: "../../../node_modules/@fortawesome/fontawesome-free/webfonts"
 
-@use '../../node_modules/animate.css/animate' as *
-@use '../../node_modules/bootstrap/scss/bootstrap' as *
-@use '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome' as *
-@use '../../node_modules/@fortawesome/fontawesome-free/scss/regular' as *
-@use '../../node_modules/@fortawesome/fontawesome-free/scss/solid' as *
-@use '../../node_modules/normalize.css/normalize' as *
+@use '../../node_modules/animate.css/animate.compat'
+@use '../../node_modules/bootstrap/scss/bootstrap'
+@use '../../node_modules/normalize.css/normalize'
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome'
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular'
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid'
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands'
+@import '../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims'
 
 =responsive-font-size($size)
   font-size: $size

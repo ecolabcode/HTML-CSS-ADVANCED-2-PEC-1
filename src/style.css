@@ -7,12 +7,12 @@
 * Copyright (c) 2020 Animate.css
 */
 :root {
-  --animate-duration: 1s;
-  --animate-delay: 1s;
-  --animate-repeat: 1;
+  --animate-duration:1s;
+  --animate-delay:1s;
+  --animate-repeat:1;
 }
 
-.animate__animated {
+.animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-duration: var(--animate-duration);
@@ -21,97 +21,97 @@
   animation-fill-mode: both;
 }
 
-.animate__animated.animate__infinite {
+.animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
-.animate__animated.animate__repeat-1 {
+.animated.repeat-1 {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-iteration-count: var(--animate-repeat);
   animation-iteration-count: var(--animate-repeat);
 }
 
-.animate__animated.animate__repeat-2 {
+.animated.repeat-2 {
   -webkit-animation-iteration-count: 2;
   animation-iteration-count: 2;
   -webkit-animation-iteration-count: calc(var(--animate-repeat) * 2);
   animation-iteration-count: calc(var(--animate-repeat) * 2);
 }
 
-.animate__animated.animate__repeat-3 {
+.animated.repeat-3 {
   -webkit-animation-iteration-count: 3;
   animation-iteration-count: 3;
   -webkit-animation-iteration-count: calc(var(--animate-repeat) * 3);
   animation-iteration-count: calc(var(--animate-repeat) * 3);
 }
 
-.animate__animated.animate__delay-1s {
+.animated.delay-1s {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
   -webkit-animation-delay: var(--animate-delay);
   animation-delay: var(--animate-delay);
 }
 
-.animate__animated.animate__delay-2s {
+.animated.delay-2s {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   -webkit-animation-delay: calc(var(--animate-delay) * 2);
   animation-delay: calc(var(--animate-delay) * 2);
 }
 
-.animate__animated.animate__delay-3s {
+.animated.delay-3s {
   -webkit-animation-delay: 3s;
   animation-delay: 3s;
   -webkit-animation-delay: calc(var(--animate-delay) * 3);
   animation-delay: calc(var(--animate-delay) * 3);
 }
 
-.animate__animated.animate__delay-4s {
+.animated.delay-4s {
   -webkit-animation-delay: 4s;
   animation-delay: 4s;
   -webkit-animation-delay: calc(var(--animate-delay) * 4);
   animation-delay: calc(var(--animate-delay) * 4);
 }
 
-.animate__animated.animate__delay-5s {
+.animated.delay-5s {
   -webkit-animation-delay: 5s;
   animation-delay: 5s;
   -webkit-animation-delay: calc(var(--animate-delay) * 5);
   animation-delay: calc(var(--animate-delay) * 5);
 }
 
-.animate__animated.animate__faster {
+.animated.faster {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-duration: calc(var(--animate-duration) / 2);
   animation-duration: calc(var(--animate-duration) / 2);
 }
 
-.animate__animated.animate__fast {
+.animated.fast {
   -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
   -webkit-animation-duration: calc(var(--animate-duration) * 0.8);
   animation-duration: calc(var(--animate-duration) * 0.8);
 }
 
-.animate__animated.animate__slow {
+.animated.slow {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-duration: calc(var(--animate-duration) * 2);
   animation-duration: calc(var(--animate-duration) * 2);
 }
 
-.animate__animated.animate__slower {
+.animated.slower {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
   -webkit-animation-duration: calc(var(--animate-duration) * 3);
   animation-duration: calc(var(--animate-duration) * 3);
 }
 
-@media print, (prefers-reduced-motion: reduce) {
-  .animate__animated {
+@media (prefers-reduced-motion: reduce), print {
+  .animated {
     -webkit-animation-duration: 1ms !important;
     animation-duration: 1ms !important;
     -webkit-transition-duration: 1ms !important;
@@ -119,17 +119,16 @@
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
   }
-  .animate__animated[class*=Out] {
+  .animated[class*=Out] {
     opacity: 0;
   }
 }
-/* Attention seekers  */
 @-webkit-keyframes bounce {
-  from, 20%, 53%, to {
+  0%, 20%, 53%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   40%, 43% {
     -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
@@ -146,8 +145,8 @@
   80% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0) scaleY(0.95);
-    transform: translate3d(0, 0, 0) scaleY(0.95);
+    -webkit-transform: translateZ(0) scaleY(0.95);
+    transform: translateZ(0) scaleY(0.95);
   }
   90% {
     -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
@@ -155,11 +154,11 @@
   }
 }
 @keyframes bounce {
-  from, 20%, 53%, to {
+  0%, 20%, 53%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   40%, 43% {
     -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
@@ -176,15 +175,15 @@
   80% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    -webkit-transform: translate3d(0, 0, 0) scaleY(0.95);
-    transform: translate3d(0, 0, 0) scaleY(0.95);
+    -webkit-transform: translateZ(0) scaleY(0.95);
+    transform: translateZ(0) scaleY(0.95);
   }
   90% {
     -webkit-transform: translate3d(0, -4px, 0) scaleY(1.02);
     transform: translate3d(0, -4px, 0) scaleY(1.02);
   }
 }
-.animate__bounce {
+.bounce {
   -webkit-animation-name: bounce;
   animation-name: bounce;
   -webkit-transform-origin: center bottom;
@@ -192,7 +191,7 @@
 }
 
 @-webkit-keyframes flash {
-  from, 50%, to {
+  0%, 50%, to {
     opacity: 1;
   }
   25%, 75% {
@@ -200,48 +199,47 @@
   }
 }
 @keyframes flash {
-  from, 50%, to {
+  0%, 50%, to {
     opacity: 1;
   }
   25%, 75% {
     opacity: 0;
   }
 }
-.animate__flash {
+.flash {
   -webkit-animation-name: flash;
   animation-name: flash;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
   to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 @keyframes pulse {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
   to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
-.animate__pulse {
+.pulse {
   -webkit-animation-name: pulse;
   animation-name: pulse;
   -webkit-animation-timing-function: ease-in-out;
@@ -249,9 +247,9 @@
 }
 
 @-webkit-keyframes rubberBand {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
   30% {
     -webkit-transform: scale3d(1.25, 0.75, 1);
@@ -274,14 +272,14 @@
     transform: scale3d(1.05, 0.95, 1);
   }
   to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 @keyframes rubberBand {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
   30% {
     -webkit-transform: scale3d(1.25, 0.75, 1);
@@ -304,19 +302,19 @@
     transform: scale3d(1.05, 0.95, 1);
   }
   to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
-.animate__rubberBand {
+.rubberBand {
   -webkit-animation-name: rubberBand;
   animation-name: rubberBand;
 }
 
 @-webkit-keyframes shakeX {
-  from, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translate3d(-10px, 0, 0);
@@ -328,9 +326,9 @@
   }
 }
 @keyframes shakeX {
-  from, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translate3d(-10px, 0, 0);
@@ -341,15 +339,15 @@
     transform: translate3d(10px, 0, 0);
   }
 }
-.animate__shakeX {
+.shakeX {
   -webkit-animation-name: shakeX;
   animation-name: shakeX;
 }
 
 @-webkit-keyframes shakeY {
-  from, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translate3d(0, -10px, 0);
@@ -361,9 +359,9 @@
   }
 }
 @keyframes shakeY {
-  from, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   10%, 30%, 50%, 70%, 90% {
     -webkit-transform: translate3d(0, -10px, 0);
@@ -374,7 +372,7 @@
     transform: translate3d(0, 10px, 0);
   }
 }
-.animate__shakeY {
+.shakeY {
   -webkit-animation-name: shakeY;
   animation-name: shakeY;
 }
@@ -431,7 +429,7 @@
     transform: translateX(0);
   }
 }
-.animate__headShake {
+.headShake {
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-name: headShake;
@@ -440,49 +438,49 @@
 
 @-webkit-keyframes swing {
   20% {
-    -webkit-transform: rotate3d(0, 0, 1, 15deg);
-    transform: rotate3d(0, 0, 1, 15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
   }
   40% {
-    -webkit-transform: rotate3d(0, 0, 1, -10deg);
-    transform: rotate3d(0, 0, 1, -10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
   60% {
-    -webkit-transform: rotate3d(0, 0, 1, 5deg);
-    transform: rotate3d(0, 0, 1, 5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
   }
   80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
 @keyframes swing {
   20% {
-    -webkit-transform: rotate3d(0, 0, 1, 15deg);
-    transform: rotate3d(0, 0, 1, 15deg);
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
   }
   40% {
-    -webkit-transform: rotate3d(0, 0, 1, -10deg);
-    transform: rotate3d(0, 0, 1, -10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
   60% {
-    -webkit-transform: rotate3d(0, 0, 1, 5deg);
-    transform: rotate3d(0, 0, 1, 5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
   }
   80% {
-    -webkit-transform: rotate3d(0, 0, 1, -5deg);
-    transform: rotate3d(0, 0, 1, -5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 0deg);
-    transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
-.animate__swing {
+.swing {
   -webkit-transform-origin: top center;
   transform-origin: top center;
   -webkit-animation-name: swing;
@@ -490,124 +488,123 @@
 }
 
 @-webkit-keyframes tada {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
   10%, 20% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
   }
   30%, 50%, 70%, 90% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
   }
   40%, 60%, 80% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
   }
   to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 @keyframes tada {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
   10%, 20% {
-    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
   }
   30%, 50%, 70%, 90% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
   }
   40%, 60%, 80% {
-    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
   }
   to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
-.animate__tada {
+.tada {
   -webkit-animation-name: tada;
   animation-name: tada;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes wobble {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   15% {
-    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    -webkit-transform: translate3d(-25%, 0, 0) rotate(-5deg);
+    transform: translate3d(-25%, 0, 0) rotate(-5deg);
   }
   30% {
-    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    -webkit-transform: translate3d(20%, 0, 0) rotate(3deg);
+    transform: translate3d(20%, 0, 0) rotate(3deg);
   }
   45% {
-    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    -webkit-transform: translate3d(-15%, 0, 0) rotate(-3deg);
+    transform: translate3d(-15%, 0, 0) rotate(-3deg);
   }
   60% {
-    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    -webkit-transform: translate3d(10%, 0, 0) rotate(2deg);
+    transform: translate3d(10%, 0, 0) rotate(2deg);
   }
   75% {
-    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    -webkit-transform: translate3d(-5%, 0, 0) rotate(-1deg);
+    transform: translate3d(-5%, 0, 0) rotate(-1deg);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes wobble {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   15% {
-    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    -webkit-transform: translate3d(-25%, 0, 0) rotate(-5deg);
+    transform: translate3d(-25%, 0, 0) rotate(-5deg);
   }
   30% {
-    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    -webkit-transform: translate3d(20%, 0, 0) rotate(3deg);
+    transform: translate3d(20%, 0, 0) rotate(3deg);
   }
   45% {
-    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    -webkit-transform: translate3d(-15%, 0, 0) rotate(-3deg);
+    transform: translate3d(-15%, 0, 0) rotate(-3deg);
   }
   60% {
-    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    -webkit-transform: translate3d(10%, 0, 0) rotate(2deg);
+    transform: translate3d(10%, 0, 0) rotate(2deg);
   }
   75% {
-    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    -webkit-transform: translate3d(-5%, 0, 0) rotate(-1deg);
+    transform: translate3d(-5%, 0, 0) rotate(-1deg);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__wobble {
+.wobble {
   -webkit-animation-name: wobble;
   animation-name: wobble;
 }
 
 @-webkit-keyframes jello {
-  from, 11.1%, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0%, 11.1%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   22.2% {
     -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
@@ -639,9 +636,9 @@
   }
 }
 @keyframes jello {
-  from, 11.1%, to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0%, 11.1%, to {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   22.2% {
     -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
@@ -672,7 +669,7 @@
     transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
   }
 }
-.animate__jello {
+.jello {
   -webkit-animation-name: jello;
   animation-name: jello;
   -webkit-transform-origin: center;
@@ -723,7 +720,7 @@
     transform: scale(1);
   }
 }
-.animate__heartBeat {
+.heartBeat {
   -webkit-animation-name: heartBeat;
   animation-name: heartBeat;
   -webkit-animation-duration: 1.3s;
@@ -734,7 +731,6 @@
   animation-timing-function: ease-in-out;
 }
 
-/* Back entrances */
 @-webkit-keyframes backInDown {
   0% {
     -webkit-transform: translateY(-1200px) scale(0.7);
@@ -742,11 +738,11 @@
     opacity: 0.7;
   }
   80% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
+    -webkit-transform: translateY(0) scale(0.7);
+    transform: translateY(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
@@ -759,17 +755,17 @@
     opacity: 0.7;
   }
   80% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
+    -webkit-transform: translateY(0) scale(0.7);
+    transform: translateY(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
 }
-.animate__backInDown {
+.backInDown {
   -webkit-animation-name: backInDown;
   animation-name: backInDown;
 }
@@ -781,11 +777,11 @@
     opacity: 0.7;
   }
   80% {
-    -webkit-transform: translateX(0px) scale(0.7);
-    transform: translateX(0px) scale(0.7);
+    -webkit-transform: translateX(0) scale(0.7);
+    transform: translateX(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
@@ -798,17 +794,17 @@
     opacity: 0.7;
   }
   80% {
-    -webkit-transform: translateX(0px) scale(0.7);
-    transform: translateX(0px) scale(0.7);
+    -webkit-transform: translateX(0) scale(0.7);
+    transform: translateX(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
 }
-.animate__backInLeft {
+.backInLeft {
   -webkit-animation-name: backInLeft;
   animation-name: backInLeft;
 }
@@ -820,11 +816,11 @@
     opacity: 0.7;
   }
   80% {
-    -webkit-transform: translateX(0px) scale(0.7);
-    transform: translateX(0px) scale(0.7);
+    -webkit-transform: translateX(0) scale(0.7);
+    transform: translateX(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
@@ -837,17 +833,17 @@
     opacity: 0.7;
   }
   80% {
-    -webkit-transform: translateX(0px) scale(0.7);
-    transform: translateX(0px) scale(0.7);
+    -webkit-transform: translateX(0) scale(0.7);
+    transform: translateX(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
 }
-.animate__backInRight {
+.backInRight {
   -webkit-animation-name: backInRight;
   animation-name: backInRight;
 }
@@ -859,11 +855,11 @@
     opacity: 0.7;
   }
   80% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
+    -webkit-transform: translateY(0) scale(0.7);
+    transform: translateY(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
@@ -876,22 +872,21 @@
     opacity: 0.7;
   }
   80% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
+    -webkit-transform: translateY(0) scale(0.7);
+    transform: translateY(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
 }
-.animate__backInUp {
+.backInUp {
   -webkit-animation-name: backInUp;
   animation-name: backInUp;
 }
 
-/* Back exits */
 @-webkit-keyframes backOutDown {
   0% {
     -webkit-transform: scale(1);
@@ -899,11 +894,11 @@
     opacity: 1;
   }
   20% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
+    -webkit-transform: translateY(0) scale(0.7);
+    transform: translateY(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: translateY(700px) scale(0.7);
     transform: translateY(700px) scale(0.7);
     opacity: 0.7;
@@ -916,17 +911,17 @@
     opacity: 1;
   }
   20% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
+    -webkit-transform: translateY(0) scale(0.7);
+    transform: translateY(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: translateY(700px) scale(0.7);
     transform: translateY(700px) scale(0.7);
     opacity: 0.7;
   }
 }
-.animate__backOutDown {
+.backOutDown {
   -webkit-animation-name: backOutDown;
   animation-name: backOutDown;
 }
@@ -938,11 +933,11 @@
     opacity: 1;
   }
   20% {
-    -webkit-transform: translateX(0px) scale(0.7);
-    transform: translateX(0px) scale(0.7);
+    -webkit-transform: translateX(0) scale(0.7);
+    transform: translateX(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: translateX(-2000px) scale(0.7);
     transform: translateX(-2000px) scale(0.7);
     opacity: 0.7;
@@ -955,17 +950,17 @@
     opacity: 1;
   }
   20% {
-    -webkit-transform: translateX(0px) scale(0.7);
-    transform: translateX(0px) scale(0.7);
+    -webkit-transform: translateX(0) scale(0.7);
+    transform: translateX(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: translateX(-2000px) scale(0.7);
     transform: translateX(-2000px) scale(0.7);
     opacity: 0.7;
   }
 }
-.animate__backOutLeft {
+.backOutLeft {
   -webkit-animation-name: backOutLeft;
   animation-name: backOutLeft;
 }
@@ -977,11 +972,11 @@
     opacity: 1;
   }
   20% {
-    -webkit-transform: translateX(0px) scale(0.7);
-    transform: translateX(0px) scale(0.7);
+    -webkit-transform: translateX(0) scale(0.7);
+    transform: translateX(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: translateX(2000px) scale(0.7);
     transform: translateX(2000px) scale(0.7);
     opacity: 0.7;
@@ -994,17 +989,17 @@
     opacity: 1;
   }
   20% {
-    -webkit-transform: translateX(0px) scale(0.7);
-    transform: translateX(0px) scale(0.7);
+    -webkit-transform: translateX(0) scale(0.7);
+    transform: translateX(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: translateX(2000px) scale(0.7);
     transform: translateX(2000px) scale(0.7);
     opacity: 0.7;
   }
 }
-.animate__backOutRight {
+.backOutRight {
   -webkit-animation-name: backOutRight;
   animation-name: backOutRight;
 }
@@ -1016,11 +1011,11 @@
     opacity: 1;
   }
   20% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
+    -webkit-transform: translateY(0) scale(0.7);
+    transform: translateY(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: translateY(-700px) scale(0.7);
     transform: translateY(-700px) scale(0.7);
     opacity: 0.7;
@@ -1033,24 +1028,23 @@
     opacity: 1;
   }
   20% {
-    -webkit-transform: translateY(0px) scale(0.7);
-    transform: translateY(0px) scale(0.7);
+    -webkit-transform: translateY(0) scale(0.7);
+    transform: translateY(0) scale(0.7);
     opacity: 0.7;
   }
-  100% {
+  to {
     -webkit-transform: translateY(-700px) scale(0.7);
     transform: translateY(-700px) scale(0.7);
     opacity: 0.7;
   }
 }
-.animate__backOutUp {
+.backOutUp {
   -webkit-animation-name: backOutUp;
   animation-name: backOutUp;
 }
 
-/* Bouncing entrances  */
 @-webkit-keyframes bounceIn {
-  from, 20%, 40%, 60%, 80%, to {
+  0%, 20%, 40%, 60%, 80%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -1078,12 +1072,12 @@
   }
   to {
     opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 @keyframes bounceIn {
-  from, 20%, 40%, 60%, 80%, to {
+  0%, 20%, 40%, 60%, 80%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -1111,11 +1105,11 @@
   }
   to {
     opacity: 1;
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
-.animate__bounceIn {
+.bounceIn {
   -webkit-animation-duration: 0.75s;
   animation-duration: 0.75s;
   -webkit-animation-duration: calc(var(--animate-duration) * 0.75);
@@ -1125,7 +1119,7 @@
 }
 
 @-webkit-keyframes bounceInDown {
-  from, 60%, 75%, 90%, to {
+  0%, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -1148,12 +1142,12 @@
     transform: translate3d(0, 5px, 0) scaleY(0.985);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes bounceInDown {
-  from, 60%, 75%, 90%, to {
+  0%, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -1176,17 +1170,17 @@
     transform: translate3d(0, 5px, 0) scaleY(0.985);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__bounceInDown {
+.bounceInDown {
   -webkit-animation-name: bounceInDown;
   animation-name: bounceInDown;
 }
 
 @-webkit-keyframes bounceInLeft {
-  from, 60%, 75%, 90%, to {
+  0%, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -1209,12 +1203,12 @@
     transform: translate3d(5px, 0, 0) scaleX(0.995);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes bounceInLeft {
-  from, 60%, 75%, 90%, to {
+  0%, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
@@ -1237,21 +1231,21 @@
     transform: translate3d(5px, 0, 0) scaleX(0.995);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__bounceInLeft {
+.bounceInLeft {
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
 }
 
 @-webkit-keyframes bounceInRight {
-  from, 60%, 75%, 90%, to {
+  0%, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(3000px, 0, 0) scaleX(3);
     transform: translate3d(3000px, 0, 0) scaleX(3);
@@ -1270,16 +1264,16 @@
     transform: translate3d(-5px, 0, 0) scaleX(0.995);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes bounceInRight {
-  from, 60%, 75%, 90%, to {
+  0%, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(3000px, 0, 0) scaleX(3);
     transform: translate3d(3000px, 0, 0) scaleX(3);
@@ -1298,21 +1292,21 @@
     transform: translate3d(-5px, 0, 0) scaleX(0.995);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__bounceInRight {
+.bounceInRight {
   -webkit-animation-name: bounceInRight;
   animation-name: bounceInRight;
 }
 
 @-webkit-keyframes bounceInUp {
-  from, 60%, 75%, 90%, to {
+  0%, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 3000px, 0) scaleY(5);
     transform: translate3d(0, 3000px, 0) scaleY(5);
@@ -1331,16 +1325,16 @@
     transform: translate3d(0, -5px, 0) scaleY(0.985);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes bounceInUp {
-  from, 60%, 75%, 90%, to {
+  0%, 60%, 75%, 90%, to {
     -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 3000px, 0) scaleY(5);
     transform: translate3d(0, 3000px, 0) scaleY(5);
@@ -1359,16 +1353,15 @@
     transform: translate3d(0, -5px, 0) scaleY(0.985);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__bounceInUp {
+.bounceInUp {
   -webkit-animation-name: bounceInUp;
   animation-name: bounceInUp;
 }
 
-/* Bouncing exits  */
 @-webkit-keyframes bounceOut {
   20% {
     -webkit-transform: scale3d(0.9, 0.9, 0.9);
@@ -1401,7 +1394,7 @@
     transform: scale3d(0.3, 0.3, 0.3);
   }
 }
-.animate__bounceOut {
+.bounceOut {
   -webkit-animation-duration: 0.75s;
   animation-duration: 0.75s;
   -webkit-animation-duration: calc(var(--animate-duration) * 0.75);
@@ -1442,7 +1435,7 @@
     transform: translate3d(0, 2000px, 0) scaleY(3);
   }
 }
-.animate__bounceOutDown {
+.bounceOutDown {
   -webkit-animation-name: bounceOutDown;
   animation-name: bounceOutDown;
 }
@@ -1471,7 +1464,7 @@
     transform: translate3d(-2000px, 0, 0) scaleX(2);
   }
 }
-.animate__bounceOutLeft {
+.bounceOutLeft {
   -webkit-animation-name: bounceOutLeft;
   animation-name: bounceOutLeft;
 }
@@ -1500,7 +1493,7 @@
     transform: translate3d(2000px, 0, 0) scaleX(2);
   }
 }
-.animate__bounceOutRight {
+.bounceOutRight {
   -webkit-animation-name: bounceOutRight;
   animation-name: bounceOutRight;
 }
@@ -1537,14 +1530,13 @@
     transform: translate3d(0, -2000px, 0) scaleY(3);
   }
 }
-.animate__bounceOutUp {
+.bounceOutUp {
   -webkit-animation-name: bounceOutUp;
   animation-name: bounceOutUp;
 }
 
-/* Fading entrances  */
 @-webkit-keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
   to {
@@ -1552,369 +1544,368 @@
   }
 }
 @keyframes fadeIn {
-  from {
+  0% {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
 }
-.animate__fadeIn {
+.fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
 }
 
 @-webkit-keyframes fadeInDown {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInDown {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInDown {
+.fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
 
 @-webkit-keyframes fadeInDownBig {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -2000px, 0);
     transform: translate3d(0, -2000px, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInDownBig {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -2000px, 0);
     transform: translate3d(0, -2000px, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInDownBig {
+.fadeInDownBig {
   -webkit-animation-name: fadeInDownBig;
   animation-name: fadeInDownBig;
 }
 
 @-webkit-keyframes fadeInLeft {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInLeft {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInLeft {
+.fadeInLeft {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 }
 
 @-webkit-keyframes fadeInLeftBig {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(-2000px, 0, 0);
     transform: translate3d(-2000px, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInLeftBig {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(-2000px, 0, 0);
     transform: translate3d(-2000px, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInLeftBig {
+.fadeInLeftBig {
   -webkit-animation-name: fadeInLeftBig;
   animation-name: fadeInLeftBig;
 }
 
 @-webkit-keyframes fadeInRight {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInRight {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInRight {
+.fadeInRight {
   -webkit-animation-name: fadeInRight;
   animation-name: fadeInRight;
 }
 
 @-webkit-keyframes fadeInRightBig {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(2000px, 0, 0);
     transform: translate3d(2000px, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInRightBig {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(2000px, 0, 0);
     transform: translate3d(2000px, 0, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInRightBig {
+.fadeInRightBig {
   -webkit-animation-name: fadeInRightBig;
   animation-name: fadeInRightBig;
 }
 
 @-webkit-keyframes fadeInUp {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInUp {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInUp {
+.fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
 
 @-webkit-keyframes fadeInUpBig {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 2000px, 0);
     transform: translate3d(0, 2000px, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInUpBig {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 2000px, 0);
     transform: translate3d(0, 2000px, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInUpBig {
+.fadeInUpBig {
   -webkit-animation-name: fadeInUpBig;
   animation-name: fadeInUpBig;
 }
 
 @-webkit-keyframes fadeInTopLeft {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, -100%, 0);
     transform: translate3d(-100%, -100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInTopLeft {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, -100%, 0);
     transform: translate3d(-100%, -100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInTopLeft {
+.fadeInTopLeft {
   -webkit-animation-name: fadeInTopLeft;
   animation-name: fadeInTopLeft;
 }
 
 @-webkit-keyframes fadeInTopRight {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(100%, -100%, 0);
     transform: translate3d(100%, -100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInTopRight {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(100%, -100%, 0);
     transform: translate3d(100%, -100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInTopRight {
+.fadeInTopRight {
   -webkit-animation-name: fadeInTopRight;
   animation-name: fadeInTopRight;
 }
 
 @-webkit-keyframes fadeInBottomLeft {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 100%, 0);
     transform: translate3d(-100%, 100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInBottomLeft {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 100%, 0);
     transform: translate3d(-100%, 100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInBottomLeft {
+.fadeInBottomLeft {
   -webkit-animation-name: fadeInBottomLeft;
   animation-name: fadeInBottomLeft;
 }
 
 @-webkit-keyframes fadeInBottomRight {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 100%, 0);
     transform: translate3d(100%, 100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes fadeInBottomRight {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 100%, 0);
     transform: translate3d(100%, 100%, 0);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__fadeInBottomRight {
+.fadeInBottomRight {
   -webkit-animation-name: fadeInBottomRight;
   animation-name: fadeInBottomRight;
 }
 
-/* Fading exits */
 @-webkit-keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -1922,20 +1913,20 @@
   }
 }
 @keyframes fadeOut {
-  from {
+  0% {
     opacity: 1;
   }
   to {
     opacity: 0;
   }
 }
-.animate__fadeOut {
+.fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
 }
 
 @-webkit-keyframes fadeOutDown {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -1945,7 +1936,7 @@
   }
 }
 @keyframes fadeOutDown {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -1954,13 +1945,13 @@
     transform: translate3d(0, 100%, 0);
   }
 }
-.animate__fadeOutDown {
+.fadeOutDown {
   -webkit-animation-name: fadeOutDown;
   animation-name: fadeOutDown;
 }
 
 @-webkit-keyframes fadeOutDownBig {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -1970,7 +1961,7 @@
   }
 }
 @keyframes fadeOutDownBig {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -1979,13 +1970,13 @@
     transform: translate3d(0, 2000px, 0);
   }
 }
-.animate__fadeOutDownBig {
+.fadeOutDownBig {
   -webkit-animation-name: fadeOutDownBig;
   animation-name: fadeOutDownBig;
 }
 
 @-webkit-keyframes fadeOutLeft {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -1995,7 +1986,7 @@
   }
 }
 @keyframes fadeOutLeft {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2004,13 +1995,13 @@
     transform: translate3d(-100%, 0, 0);
   }
 }
-.animate__fadeOutLeft {
+.fadeOutLeft {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
 }
 
 @-webkit-keyframes fadeOutLeftBig {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2020,7 +2011,7 @@
   }
 }
 @keyframes fadeOutLeftBig {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2029,13 +2020,13 @@
     transform: translate3d(-2000px, 0, 0);
   }
 }
-.animate__fadeOutLeftBig {
+.fadeOutLeftBig {
   -webkit-animation-name: fadeOutLeftBig;
   animation-name: fadeOutLeftBig;
 }
 
 @-webkit-keyframes fadeOutRight {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2045,7 +2036,7 @@
   }
 }
 @keyframes fadeOutRight {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2054,13 +2045,13 @@
     transform: translate3d(100%, 0, 0);
   }
 }
-.animate__fadeOutRight {
+.fadeOutRight {
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight;
 }
 
 @-webkit-keyframes fadeOutRightBig {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2070,7 +2061,7 @@
   }
 }
 @keyframes fadeOutRightBig {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2079,13 +2070,13 @@
     transform: translate3d(2000px, 0, 0);
   }
 }
-.animate__fadeOutRightBig {
+.fadeOutRightBig {
   -webkit-animation-name: fadeOutRightBig;
   animation-name: fadeOutRightBig;
 }
 
 @-webkit-keyframes fadeOutUp {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2095,7 +2086,7 @@
   }
 }
 @keyframes fadeOutUp {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2104,13 +2095,13 @@
     transform: translate3d(0, -100%, 0);
   }
 }
-.animate__fadeOutUp {
+.fadeOutUp {
   -webkit-animation-name: fadeOutUp;
   animation-name: fadeOutUp;
 }
 
 @-webkit-keyframes fadeOutUpBig {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2120,7 +2111,7 @@
   }
 }
 @keyframes fadeOutUpBig {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2129,16 +2120,16 @@
     transform: translate3d(0, -2000px, 0);
   }
 }
-.animate__fadeOutUpBig {
+.fadeOutUpBig {
   -webkit-animation-name: fadeOutUpBig;
   animation-name: fadeOutUpBig;
 }
 
 @-webkit-keyframes fadeOutTopLeft {
-  from {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     opacity: 0;
@@ -2147,10 +2138,10 @@
   }
 }
 @keyframes fadeOutTopLeft {
-  from {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     opacity: 0;
@@ -2158,16 +2149,16 @@
     transform: translate3d(-100%, -100%, 0);
   }
 }
-.animate__fadeOutTopLeft {
+.fadeOutTopLeft {
   -webkit-animation-name: fadeOutTopLeft;
   animation-name: fadeOutTopLeft;
 }
 
 @-webkit-keyframes fadeOutTopRight {
-  from {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     opacity: 0;
@@ -2176,10 +2167,10 @@
   }
 }
 @keyframes fadeOutTopRight {
-  from {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     opacity: 0;
@@ -2187,16 +2178,16 @@
     transform: translate3d(100%, -100%, 0);
   }
 }
-.animate__fadeOutTopRight {
+.fadeOutTopRight {
   -webkit-animation-name: fadeOutTopRight;
   animation-name: fadeOutTopRight;
 }
 
 @-webkit-keyframes fadeOutBottomRight {
-  from {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     opacity: 0;
@@ -2205,10 +2196,10 @@
   }
 }
 @keyframes fadeOutBottomRight {
-  from {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     opacity: 0;
@@ -2216,16 +2207,16 @@
     transform: translate3d(100%, 100%, 0);
   }
 }
-.animate__fadeOutBottomRight {
+.fadeOutBottomRight {
   -webkit-animation-name: fadeOutBottomRight;
   animation-name: fadeOutBottomRight;
 }
 
 @-webkit-keyframes fadeOutBottomLeft {
-  from {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     opacity: 0;
@@ -2234,10 +2225,10 @@
   }
 }
 @keyframes fadeOutBottomLeft {
-  from {
+  0% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     opacity: 0;
@@ -2245,77 +2236,76 @@
     transform: translate3d(-100%, 100%, 0);
   }
 }
-.animate__fadeOutBottomLeft {
+.fadeOutBottomLeft {
   -webkit-animation-name: fadeOutBottomLeft;
   animation-name: fadeOutBottomLeft;
 }
 
-/* Flippers */
 @-webkit-keyframes flip {
-  from {
-    -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+  0% {
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+    transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   40% {
-    -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+    transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   50% {
-    -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+    transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   80% {
-    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   to {
-    -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+    transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
 }
 @keyframes flip {
-  from {
-    -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg);
+  0% {
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+    transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   40% {
-    -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+    transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
   50% {
-    -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+    transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   80% {
-    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95) translateZ(0) rotateY(0deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   to {
-    -webkit-transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
-    transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+    transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
 }
-.animate__animated.animate__flip {
+.animated.flip {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -2323,27 +2313,27 @@
 }
 
 @-webkit-keyframes flipInX {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
     opacity: 0;
   }
   40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transform: perspective(400px) rotateX(-20deg);
+    transform: perspective(400px) rotateX(-20deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
     opacity: 1;
   }
   80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    -webkit-transform: perspective(400px) rotateX(-5deg);
+    transform: perspective(400px) rotateX(-5deg);
   }
   to {
     -webkit-transform: perspective(400px);
@@ -2351,34 +2341,34 @@
   }
 }
 @keyframes flipInX {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+  0% {
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
     opacity: 0;
   }
   40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transform: perspective(400px) rotateX(-20deg);
+    transform: perspective(400px) rotateX(-20deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    -webkit-transform: perspective(400px) rotateX(10deg);
+    transform: perspective(400px) rotateX(10deg);
     opacity: 1;
   }
   80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    -webkit-transform: perspective(400px) rotateX(-5deg);
+    transform: perspective(400px) rotateX(-5deg);
   }
   to {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
   }
 }
-.animate__flipInX {
+.flipInX {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
@@ -2386,27 +2376,27 @@
 }
 
 @-webkit-keyframes flipInY {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
     opacity: 0;
   }
   40% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transform: perspective(400px) rotateY(-20deg);
+    transform: perspective(400px) rotateY(-20deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   60% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    -webkit-transform: perspective(400px) rotateY(10deg);
+    transform: perspective(400px) rotateY(10deg);
     opacity: 1;
   }
   80% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    -webkit-transform: perspective(400px) rotateY(-5deg);
+    transform: perspective(400px) rotateY(-5deg);
   }
   to {
     -webkit-transform: perspective(400px);
@@ -2414,34 +2404,34 @@
   }
 }
 @keyframes flipInY {
-  from {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
     opacity: 0;
   }
   40% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transform: perspective(400px) rotateY(-20deg);
+    transform: perspective(400px) rotateY(-20deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
   60% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    -webkit-transform: perspective(400px) rotateY(10deg);
+    transform: perspective(400px) rotateY(10deg);
     opacity: 1;
   }
   80% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    -webkit-transform: perspective(400px) rotateY(-5deg);
+    transform: perspective(400px) rotateY(-5deg);
   }
   to {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
   }
 }
-.animate__flipInY {
+.flipInY {
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
   -webkit-animation-name: flipInY;
@@ -2449,38 +2439,38 @@
 }
 
 @-webkit-keyframes flipOutX {
-  from {
+  0% {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
   }
   30% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transform: perspective(400px) rotateX(-20deg);
+    transform: perspective(400px) rotateX(-20deg);
     opacity: 1;
   }
   to {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
     opacity: 0;
   }
 }
 @keyframes flipOutX {
-  from {
+  0% {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
   }
   30% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transform: perspective(400px) rotateX(-20deg);
+    transform: perspective(400px) rotateX(-20deg);
     opacity: 1;
   }
   to {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
     opacity: 0;
   }
 }
-.animate__flipOutX {
+.flipOutX {
   -webkit-animation-duration: 0.75s;
   animation-duration: 0.75s;
   -webkit-animation-duration: calc(var(--animate-duration) * 0.75);
@@ -2492,38 +2482,38 @@
 }
 
 @-webkit-keyframes flipOutY {
-  from {
+  0% {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
   }
   30% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    -webkit-transform: perspective(400px) rotateY(-15deg);
+    transform: perspective(400px) rotateY(-15deg);
     opacity: 1;
   }
   to {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
     opacity: 0;
   }
 }
 @keyframes flipOutY {
-  from {
+  0% {
     -webkit-transform: perspective(400px);
     transform: perspective(400px);
   }
   30% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    -webkit-transform: perspective(400px) rotateY(-15deg);
+    transform: perspective(400px) rotateY(-15deg);
     opacity: 1;
   }
   to {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transform: perspective(400px) rotateY(90deg);
+    transform: perspective(400px) rotateY(90deg);
     opacity: 0;
   }
 }
-.animate__flipOutY {
+.flipOutY {
   -webkit-animation-duration: 0.75s;
   animation-duration: 0.75s;
   -webkit-animation-duration: calc(var(--animate-duration) * 0.75);
@@ -2534,9 +2524,8 @@
   animation-name: flipOutY;
 }
 
-/* Lightspeed */
 @-webkit-keyframes lightSpeedInRight {
-  from {
+  0% {
     -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
     transform: translate3d(100%, 0, 0) skewX(-30deg);
     opacity: 0;
@@ -2551,12 +2540,12 @@
     transform: skewX(-5deg);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes lightSpeedInRight {
-  from {
+  0% {
     -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
     transform: translate3d(100%, 0, 0) skewX(-30deg);
     opacity: 0;
@@ -2571,11 +2560,11 @@
     transform: skewX(-5deg);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__lightSpeedInRight {
+.lightSpeedInRight {
   -webkit-animation-name: lightSpeedInRight;
   animation-name: lightSpeedInRight;
   -webkit-animation-timing-function: ease-out;
@@ -2583,7 +2572,7 @@
 }
 
 @-webkit-keyframes lightSpeedInLeft {
-  from {
+  0% {
     -webkit-transform: translate3d(-100%, 0, 0) skewX(30deg);
     transform: translate3d(-100%, 0, 0) skewX(30deg);
     opacity: 0;
@@ -2598,12 +2587,12 @@
     transform: skewX(5deg);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes lightSpeedInLeft {
-  from {
+  0% {
     -webkit-transform: translate3d(-100%, 0, 0) skewX(30deg);
     transform: translate3d(-100%, 0, 0) skewX(30deg);
     opacity: 0;
@@ -2618,11 +2607,11 @@
     transform: skewX(5deg);
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__lightSpeedInLeft {
+.lightSpeedInLeft {
   -webkit-animation-name: lightSpeedInLeft;
   animation-name: lightSpeedInLeft;
   -webkit-animation-timing-function: ease-out;
@@ -2630,7 +2619,7 @@
 }
 
 @-webkit-keyframes lightSpeedOutRight {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2640,7 +2629,7 @@
   }
 }
 @keyframes lightSpeedOutRight {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2649,7 +2638,7 @@
     opacity: 0;
   }
 }
-.animate__lightSpeedOutRight {
+.lightSpeedOutRight {
   -webkit-animation-name: lightSpeedOutRight;
   animation-name: lightSpeedOutRight;
   -webkit-animation-timing-function: ease-in;
@@ -2657,7 +2646,7 @@
 }
 
 @-webkit-keyframes lightSpeedOutLeft {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2667,7 +2656,7 @@
   }
 }
 @keyframes lightSpeedOutLeft {
-  from {
+  0% {
     opacity: 1;
   }
   to {
@@ -2676,39 +2665,38 @@
     opacity: 0;
   }
 }
-.animate__lightSpeedOutLeft {
+.lightSpeedOutLeft {
   -webkit-animation-name: lightSpeedOutLeft;
   animation-name: lightSpeedOutLeft;
   -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
 }
 
-/* Rotating entrances */
 @-webkit-keyframes rotateIn {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, -200deg);
-    transform: rotate3d(0, 0, 1, -200deg);
+  0% {
+    -webkit-transform: rotate(-200deg);
+    transform: rotate(-200deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
 @keyframes rotateIn {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, -200deg);
-    transform: rotate3d(0, 0, 1, -200deg);
+  0% {
+    -webkit-transform: rotate(-200deg);
+    transform: rotate(-200deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
-.animate__rotateIn {
+.rotateIn {
   -webkit-animation-name: rotateIn;
   animation-name: rotateIn;
   -webkit-transform-origin: center;
@@ -2716,30 +2704,30 @@
 }
 
 @-webkit-keyframes rotateInDownLeft {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg);
+  0% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
 @keyframes rotateInDownLeft {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg);
+  0% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
-.animate__rotateInDownLeft {
+.rotateInDownLeft {
   -webkit-animation-name: rotateInDownLeft;
   animation-name: rotateInDownLeft;
   -webkit-transform-origin: left bottom;
@@ -2747,30 +2735,30 @@
 }
 
 @-webkit-keyframes rotateInDownRight {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg);
+  0% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
 @keyframes rotateInDownRight {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg);
+  0% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
-.animate__rotateInDownRight {
+.rotateInDownRight {
   -webkit-animation-name: rotateInDownRight;
   animation-name: rotateInDownRight;
   -webkit-transform-origin: right bottom;
@@ -2778,30 +2766,30 @@
 }
 
 @-webkit-keyframes rotateInUpLeft {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg);
+  0% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
 @keyframes rotateInUpLeft {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg);
+  0% {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
-.animate__rotateInUpLeft {
+.rotateInUpLeft {
   -webkit-animation-name: rotateInUpLeft;
   animation-name: rotateInUpLeft;
   -webkit-transform-origin: left bottom;
@@ -2809,58 +2797,57 @@
 }
 
 @-webkit-keyframes rotateInUpRight {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, -90deg);
-    transform: rotate3d(0, 0, 1, -90deg);
+  0% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
 @keyframes rotateInUpRight {
-  from {
-    -webkit-transform: rotate3d(0, 0, 1, -90deg);
-    transform: rotate3d(0, 0, 1, -90deg);
+  0% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
     opacity: 0;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
     opacity: 1;
   }
 }
-.animate__rotateInUpRight {
+.rotateInUpRight {
   -webkit-animation-name: rotateInUpRight;
   animation-name: rotateInUpRight;
   -webkit-transform-origin: right bottom;
   transform-origin: right bottom;
 }
 
-/* Rotating exits */
 @-webkit-keyframes rotateOut {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 200deg);
-    transform: rotate3d(0, 0, 1, 200deg);
+    -webkit-transform: rotate(200deg);
+    transform: rotate(200deg);
     opacity: 0;
   }
 }
 @keyframes rotateOut {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 200deg);
-    transform: rotate3d(0, 0, 1, 200deg);
+    -webkit-transform: rotate(200deg);
+    transform: rotate(200deg);
     opacity: 0;
   }
 }
-.animate__rotateOut {
+.rotateOut {
   -webkit-animation-name: rotateOut;
   animation-name: rotateOut;
   -webkit-transform-origin: center;
@@ -2868,26 +2855,26 @@
 }
 
 @-webkit-keyframes rotateOutDownLeft {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     opacity: 0;
   }
 }
 @keyframes rotateOutDownLeft {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 45deg);
-    transform: rotate3d(0, 0, 1, 45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
     opacity: 0;
   }
 }
-.animate__rotateOutDownLeft {
+.rotateOutDownLeft {
   -webkit-animation-name: rotateOutDownLeft;
   animation-name: rotateOutDownLeft;
   -webkit-transform-origin: left bottom;
@@ -2895,26 +2882,26 @@
 }
 
 @-webkit-keyframes rotateOutDownRight {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     opacity: 0;
   }
 }
 @keyframes rotateOutDownRight {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     opacity: 0;
   }
 }
-.animate__rotateOutDownRight {
+.rotateOutDownRight {
   -webkit-animation-name: rotateOutDownRight;
   animation-name: rotateOutDownRight;
   -webkit-transform-origin: right bottom;
@@ -2922,26 +2909,26 @@
 }
 
 @-webkit-keyframes rotateOutUpLeft {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     opacity: 0;
   }
 }
 @keyframes rotateOutUpLeft {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, -45deg);
-    transform: rotate3d(0, 0, 1, -45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     opacity: 0;
   }
 }
-.animate__rotateOutUpLeft {
+.rotateOutUpLeft {
   -webkit-animation-name: rotateOutUpLeft;
   animation-name: rotateOutUpLeft;
   -webkit-transform-origin: left bottom;
@@ -2949,47 +2936,46 @@
 }
 
 @-webkit-keyframes rotateOutUpRight {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 90deg);
-    transform: rotate3d(0, 0, 1, 90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
     opacity: 0;
   }
 }
 @keyframes rotateOutUpRight {
-  from {
+  0% {
     opacity: 1;
   }
   to {
-    -webkit-transform: rotate3d(0, 0, 1, 90deg);
-    transform: rotate3d(0, 0, 1, 90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
     opacity: 0;
   }
 }
-.animate__rotateOutUpRight {
+.rotateOutUpRight {
   -webkit-animation-name: rotateOutUpRight;
   animation-name: rotateOutUpRight;
   -webkit-transform-origin: right bottom;
   transform-origin: right bottom;
 }
 
-/* Specials */
 @-webkit-keyframes hinge {
   0% {
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
   20%, 60% {
-    -webkit-transform: rotate3d(0, 0, 1, 80deg);
-    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform: rotate(80deg);
+    transform: rotate(80deg);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
   40%, 80% {
-    -webkit-transform: rotate3d(0, 0, 1, 60deg);
-    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     opacity: 1;
@@ -3006,14 +2992,14 @@
     animation-timing-function: ease-in-out;
   }
   20%, 60% {
-    -webkit-transform: rotate3d(0, 0, 1, 80deg);
-    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform: rotate(80deg);
+    transform: rotate(80deg);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
   }
   40%, 80% {
-    -webkit-transform: rotate3d(0, 0, 1, 60deg);
-    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform: rotate(60deg);
+    transform: rotate(60deg);
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
     opacity: 1;
@@ -3024,7 +3010,7 @@
     opacity: 0;
   }
 }
-.animate__hinge {
+.hinge {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-duration: calc(var(--animate-duration) * 2);
@@ -3036,7 +3022,7 @@
 }
 
 @-webkit-keyframes jackInTheBox {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale(0.1) rotate(30deg);
     transform: scale(0.1) rotate(30deg);
@@ -3058,7 +3044,7 @@
   }
 }
 @keyframes jackInTheBox {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale(0.1) rotate(30deg);
     transform: scale(0.1) rotate(30deg);
@@ -3079,70 +3065,67 @@
     transform: scale(1);
   }
 }
-.animate__jackInTheBox {
+.jackInTheBox {
   -webkit-animation-name: jackInTheBox;
   animation-name: jackInTheBox;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes rollIn {
-  from {
+  0% {
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    -webkit-transform: translate3d(-100%, 0, 0) rotate(-120deg);
+    transform: translate3d(-100%, 0, 0) rotate(-120deg);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes rollIn {
-  from {
+  0% {
     opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
-    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    -webkit-transform: translate3d(-100%, 0, 0) rotate(-120deg);
+    transform: translate3d(-100%, 0, 0) rotate(-120deg);
   }
   to {
     opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__rollIn {
+.rollIn {
   -webkit-animation-name: rollIn;
   animation-name: rollIn;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 @-webkit-keyframes rollOut {
-  from {
+  0% {
     opacity: 1;
   }
   to {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
-    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    -webkit-transform: translate3d(100%, 0, 0) rotate(120deg);
+    transform: translate3d(100%, 0, 0) rotate(120deg);
   }
 }
 @keyframes rollOut {
-  from {
+  0% {
     opacity: 1;
   }
   to {
     opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
-    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+    -webkit-transform: translate3d(100%, 0, 0) rotate(120deg);
+    transform: translate3d(100%, 0, 0) rotate(120deg);
   }
 }
-.animate__rollOut {
+.rollOut {
   -webkit-animation-name: rollOut;
   animation-name: rollOut;
 }
 
-/* Zooming entrances */
 @-webkit-keyframes zoomIn {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
@@ -3152,7 +3135,7 @@
   }
 }
 @keyframes zoomIn {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
@@ -3161,13 +3144,13 @@
     opacity: 1;
   }
 }
-.animate__zoomIn {
+.zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
 }
 
 @-webkit-keyframes zoomInDown {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
     transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
@@ -3183,7 +3166,7 @@
   }
 }
 @keyframes zoomInDown {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
     transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
@@ -3198,13 +3181,13 @@
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-.animate__zoomInDown {
+.zoomInDown {
   -webkit-animation-name: zoomInDown;
   animation-name: zoomInDown;
 }
 
 @-webkit-keyframes zoomInLeft {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
     transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
@@ -3220,7 +3203,7 @@
   }
 }
 @keyframes zoomInLeft {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
     transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
@@ -3235,13 +3218,13 @@
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-.animate__zoomInLeft {
+.zoomInLeft {
   -webkit-animation-name: zoomInLeft;
   animation-name: zoomInLeft;
 }
 
 @-webkit-keyframes zoomInRight {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
     transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
@@ -3257,7 +3240,7 @@
   }
 }
 @keyframes zoomInRight {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
     transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
@@ -3272,13 +3255,13 @@
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-.animate__zoomInRight {
+.zoomInRight {
   -webkit-animation-name: zoomInRight;
   animation-name: zoomInRight;
 }
 
 @-webkit-keyframes zoomInUp {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
     transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
@@ -3294,7 +3277,7 @@
   }
 }
 @keyframes zoomInUp {
-  from {
+  0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
     transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
@@ -3309,14 +3292,13 @@
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-.animate__zoomInUp {
+.zoomInUp {
   -webkit-animation-name: zoomInUp;
   animation-name: zoomInUp;
 }
 
-/* Zooming exits */
 @-webkit-keyframes zoomOut {
-  from {
+  0% {
     opacity: 1;
   }
   50% {
@@ -3329,7 +3311,7 @@
   }
 }
 @keyframes zoomOut {
-  from {
+  0% {
     opacity: 1;
   }
   50% {
@@ -3341,7 +3323,7 @@
     opacity: 0;
   }
 }
-.animate__zoomOut {
+.zoomOut {
   -webkit-animation-name: zoomOut;
   animation-name: zoomOut;
 }
@@ -3378,7 +3360,7 @@
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-.animate__zoomOutDown {
+.zoomOutDown {
   -webkit-animation-name: zoomOutDown;
   animation-name: zoomOutDown;
   -webkit-transform-origin: center bottom;
@@ -3409,7 +3391,7 @@
     transform: scale(0.1) translate3d(-2000px, 0, 0);
   }
 }
-.animate__zoomOutLeft {
+.zoomOutLeft {
   -webkit-animation-name: zoomOutLeft;
   animation-name: zoomOutLeft;
   -webkit-transform-origin: left center;
@@ -3440,7 +3422,7 @@
     transform: scale(0.1) translate3d(2000px, 0, 0);
   }
 }
-.animate__zoomOutRight {
+.zoomOutRight {
   -webkit-animation-name: zoomOutRight;
   animation-name: zoomOutRight;
   -webkit-transform-origin: right center;
@@ -3479,127 +3461,125 @@
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
-.animate__zoomOutUp {
+.zoomOutUp {
   -webkit-animation-name: zoomOutUp;
   animation-name: zoomOutUp;
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
 }
 
-/* Sliding entrances */
 @-webkit-keyframes slideInDown {
-  from {
+  0% {
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
     visibility: visible;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes slideInDown {
-  from {
+  0% {
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
     visibility: visible;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__slideInDown {
+.slideInDown {
   -webkit-animation-name: slideInDown;
   animation-name: slideInDown;
 }
 
 @-webkit-keyframes slideInLeft {
-  from {
+  0% {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes slideInLeft {
-  from {
+  0% {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__slideInLeft {
+.slideInLeft {
   -webkit-animation-name: slideInLeft;
   animation-name: slideInLeft;
 }
 
 @-webkit-keyframes slideInRight {
-  from {
+  0% {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     visibility: visible;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes slideInRight {
-  from {
+  0% {
     -webkit-transform: translate3d(100%, 0, 0);
     transform: translate3d(100%, 0, 0);
     visibility: visible;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__slideInRight {
+.slideInRight {
   -webkit-animation-name: slideInRight;
   animation-name: slideInRight;
 }
 
 @-webkit-keyframes slideInUp {
-  from {
+  0% {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
     visibility: visible;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 @keyframes slideInUp {
-  from {
+  0% {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
     visibility: visible;
   }
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
-.animate__slideInUp {
+.slideInUp {
   -webkit-animation-name: slideInUp;
   animation-name: slideInUp;
 }
 
-/* Sliding exits */
 @-webkit-keyframes slideOutDown {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     visibility: hidden;
@@ -3608,9 +3588,9 @@
   }
 }
 @keyframes slideOutDown {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     visibility: hidden;
@@ -3618,15 +3598,15 @@
     transform: translate3d(0, 100%, 0);
   }
 }
-.animate__slideOutDown {
+.slideOutDown {
   -webkit-animation-name: slideOutDown;
   animation-name: slideOutDown;
 }
 
 @-webkit-keyframes slideOutLeft {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     visibility: hidden;
@@ -3635,9 +3615,9 @@
   }
 }
 @keyframes slideOutLeft {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     visibility: hidden;
@@ -3645,15 +3625,15 @@
     transform: translate3d(-100%, 0, 0);
   }
 }
-.animate__slideOutLeft {
+.slideOutLeft {
   -webkit-animation-name: slideOutLeft;
   animation-name: slideOutLeft;
 }
 
 @-webkit-keyframes slideOutRight {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     visibility: hidden;
@@ -3662,9 +3642,9 @@
   }
 }
 @keyframes slideOutRight {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     visibility: hidden;
@@ -3672,15 +3652,15 @@
     transform: translate3d(100%, 0, 0);
   }
 }
-.animate__slideOutRight {
+.slideOutRight {
   -webkit-animation-name: slideOutRight;
   animation-name: slideOutRight;
 }
 
 @-webkit-keyframes slideOutUp {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     visibility: hidden;
@@ -3689,9 +3669,9 @@
   }
 }
 @keyframes slideOutUp {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
   to {
     visibility: hidden;
@@ -3699,7 +3679,7 @@
     transform: translate3d(0, -100%, 0);
   }
 }
-.animate__slideOutUp {
+.slideOutUp {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
@@ -15549,6 +15529,315 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
 /*!
  * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -23845,7 +24134,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype");
+  src: url("../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2") format("woff2"), url("../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf") format("truetype");
 }
 .far,
 .fa-regular {
@@ -23867,320 +24156,4972 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype");
+  src: url("../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2") format("woff2"), url("../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf") format("truetype");
 }
 .fas,
 .fa-solid {
   font-weight: 900;
 }
 
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
+/*!
+ * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2024 Fonticons, Inc.
  */
-html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+:root, :host {
+  --fa-style-family-brands: "Font Awesome 6 Brands";
+  --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
 }
 
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
+@font-face {
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2") format("woff2"), url("../../../node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf") format("truetype");
+}
+.fab,
+.fa-brands {
+  font-weight: 400;
+}
+
+.fa-monero {
+  --fa: "\f3d0";
+}
+
+.fa-hooli {
+  --fa: "\f427";
+}
+
+.fa-yelp {
+  --fa: "\f1e9";
+}
+
+.fa-cc-visa {
+  --fa: "\f1f0";
+}
+
+.fa-lastfm {
+  --fa: "\f202";
+}
+
+.fa-shopware {
+  --fa: "\f5b5";
+}
+
+.fa-creative-commons-nc {
+  --fa: "\f4e8";
+}
+
+.fa-aws {
+  --fa: "\f375";
+}
+
+.fa-redhat {
+  --fa: "\f7bc";
+}
+
+.fa-yoast {
+  --fa: "\f2b1";
+}
+
+.fa-cloudflare {
+  --fa: "\e07d";
+}
+
+.fa-ups {
+  --fa: "\f7e0";
+}
+
+.fa-pixiv {
+  --fa: "\e640";
+}
+
+.fa-wpexplorer {
+  --fa: "\f2de";
+}
+
+.fa-dyalog {
+  --fa: "\f399";
+}
+
+.fa-bity {
+  --fa: "\f37a";
+}
+
+.fa-stackpath {
+  --fa: "\f842";
+}
+
+.fa-buysellads {
+  --fa: "\f20d";
+}
+
+.fa-first-order {
+  --fa: "\f2b0";
+}
+
+.fa-modx {
+  --fa: "\f285";
+}
+
+.fa-guilded {
+  --fa: "\e07e";
+}
+
+.fa-vnv {
+  --fa: "\f40b";
+}
+
+.fa-square-js {
+  --fa: "\f3b9";
+}
+
+.fa-js-square {
+  --fa: "\f3b9";
+}
+
+.fa-microsoft {
+  --fa: "\f3ca";
+}
+
+.fa-qq {
+  --fa: "\f1d6";
+}
+
+.fa-orcid {
+  --fa: "\f8d2";
+}
+
+.fa-java {
+  --fa: "\f4e4";
+}
+
+.fa-invision {
+  --fa: "\f7b0";
+}
+
+.fa-creative-commons-pd-alt {
+  --fa: "\f4ed";
+}
+
+.fa-centercode {
+  --fa: "\f380";
+}
+
+.fa-glide-g {
+  --fa: "\f2a6";
+}
+
+.fa-drupal {
+  --fa: "\f1a9";
+}
+
+.fa-jxl {
+  --fa: "\e67b";
+}
+
+.fa-dart-lang {
+  --fa: "\e693";
+}
+
+.fa-hire-a-helper {
+  --fa: "\f3b0";
+}
+
+.fa-creative-commons-by {
+  --fa: "\f4e7";
+}
+
+.fa-unity {
+  --fa: "\e049";
+}
+
+.fa-whmcs {
+  --fa: "\f40d";
+}
+
+.fa-rocketchat {
+  --fa: "\f3e8";
+}
+
+.fa-vk {
+  --fa: "\f189";
+}
+
+.fa-untappd {
+  --fa: "\f405";
+}
+
+.fa-mailchimp {
+  --fa: "\f59e";
+}
+
+.fa-css3-alt {
+  --fa: "\f38b";
+}
+
+.fa-square-reddit {
+  --fa: "\f1a2";
+}
+
+.fa-reddit-square {
+  --fa: "\f1a2";
+}
+
+.fa-vimeo-v {
+  --fa: "\f27d";
+}
+
+.fa-contao {
+  --fa: "\f26d";
+}
+
+.fa-square-font-awesome {
+  --fa: "\e5ad";
+}
+
+.fa-deskpro {
+  --fa: "\f38f";
+}
+
+.fa-brave {
+  --fa: "\e63c";
+}
+
+.fa-sistrix {
+  --fa: "\f3ee";
+}
+
+.fa-square-instagram {
+  --fa: "\e055";
+}
+
+.fa-instagram-square {
+  --fa: "\e055";
+}
+
+.fa-battle-net {
+  --fa: "\f835";
+}
+
+.fa-the-red-yeti {
+  --fa: "\f69d";
+}
+
+.fa-square-hacker-news {
+  --fa: "\f3af";
+}
+
+.fa-hacker-news-square {
+  --fa: "\f3af";
+}
+
+.fa-edge {
+  --fa: "\f282";
+}
+
+.fa-threads {
+  --fa: "\e618";
+}
+
+.fa-napster {
+  --fa: "\f3d2";
+}
+
+.fa-square-snapchat {
+  --fa: "\f2ad";
+}
+
+.fa-snapchat-square {
+  --fa: "\f2ad";
+}
+
+.fa-google-plus-g {
+  --fa: "\f0d5";
+}
+
+.fa-artstation {
+  --fa: "\f77a";
+}
+
+.fa-markdown {
+  --fa: "\f60f";
+}
+
+.fa-sourcetree {
+  --fa: "\f7d3";
+}
+
+.fa-google-plus {
+  --fa: "\f2b3";
+}
+
+.fa-diaspora {
+  --fa: "\f791";
+}
+
+.fa-foursquare {
+  --fa: "\f180";
+}
+
+.fa-stack-overflow {
+  --fa: "\f16c";
+}
+
+.fa-github-alt {
+  --fa: "\f113";
+}
+
+.fa-phoenix-squadron {
+  --fa: "\f511";
+}
+
+.fa-pagelines {
+  --fa: "\f18c";
+}
+
+.fa-algolia {
+  --fa: "\f36c";
+}
+
+.fa-red-river {
+  --fa: "\f3e3";
+}
+
+.fa-creative-commons-sa {
+  --fa: "\f4ef";
+}
+
+.fa-safari {
+  --fa: "\f267";
+}
+
+.fa-google {
+  --fa: "\f1a0";
+}
+
+.fa-square-font-awesome-stroke {
+  --fa: "\f35c";
+}
+
+.fa-font-awesome-alt {
+  --fa: "\f35c";
+}
+
+.fa-atlassian {
+  --fa: "\f77b";
+}
+
+.fa-linkedin-in {
+  --fa: "\f0e1";
+}
+
+.fa-digital-ocean {
+  --fa: "\f391";
+}
+
+.fa-nimblr {
+  --fa: "\f5a8";
+}
+
+.fa-chromecast {
+  --fa: "\f838";
+}
+
+.fa-evernote {
+  --fa: "\f839";
+}
+
+.fa-hacker-news {
+  --fa: "\f1d4";
+}
+
+.fa-creative-commons-sampling {
+  --fa: "\f4f0";
+}
+
+.fa-adversal {
+  --fa: "\f36a";
+}
+
+.fa-creative-commons {
+  --fa: "\f25e";
+}
+
+.fa-watchman-monitoring {
+  --fa: "\e087";
+}
+
+.fa-fonticons {
+  --fa: "\f280";
+}
+
+.fa-weixin {
+  --fa: "\f1d7";
+}
+
+.fa-shirtsinbulk {
+  --fa: "\f214";
+}
+
+.fa-codepen {
+  --fa: "\f1cb";
+}
+
+.fa-git-alt {
+  --fa: "\f841";
+}
+
+.fa-lyft {
+  --fa: "\f3c3";
+}
+
+.fa-rev {
+  --fa: "\f5b2";
+}
+
+.fa-windows {
+  --fa: "\f17a";
+}
+
+.fa-wizards-of-the-coast {
+  --fa: "\f730";
+}
+
+.fa-square-viadeo {
+  --fa: "\f2aa";
+}
+
+.fa-viadeo-square {
+  --fa: "\f2aa";
+}
+
+.fa-meetup {
+  --fa: "\f2e0";
+}
+
+.fa-centos {
+  --fa: "\f789";
+}
+
+.fa-adn {
+  --fa: "\f170";
+}
+
+.fa-cloudsmith {
+  --fa: "\f384";
+}
+
+.fa-opensuse {
+  --fa: "\e62b";
+}
+
+.fa-pied-piper-alt {
+  --fa: "\f1a8";
+}
+
+.fa-square-dribbble {
+  --fa: "\f397";
+}
+
+.fa-dribbble-square {
+  --fa: "\f397";
+}
+
+.fa-codiepie {
+  --fa: "\f284";
+}
+
+.fa-node {
+  --fa: "\f419";
+}
+
+.fa-mix {
+  --fa: "\f3cb";
+}
+
+.fa-steam {
+  --fa: "\f1b6";
+}
+
+.fa-cc-apple-pay {
+  --fa: "\f416";
+}
+
+.fa-scribd {
+  --fa: "\f28a";
+}
+
+.fa-debian {
+  --fa: "\e60b";
+}
+
+.fa-openid {
+  --fa: "\f19b";
+}
+
+.fa-instalod {
+  --fa: "\e081";
+}
+
+.fa-files-pinwheel {
+  --fa: "\e69f";
+}
+
+.fa-expeditedssl {
+  --fa: "\f23e";
+}
+
+.fa-sellcast {
+  --fa: "\f2da";
+}
+
+.fa-square-twitter {
+  --fa: "\f081";
+}
+
+.fa-twitter-square {
+  --fa: "\f081";
+}
+
+.fa-r-project {
+  --fa: "\f4f7";
+}
+
+.fa-delicious {
+  --fa: "\f1a5";
+}
+
+.fa-freebsd {
+  --fa: "\f3a4";
+}
+
+.fa-vuejs {
+  --fa: "\f41f";
+}
+
+.fa-accusoft {
+  --fa: "\f369";
+}
+
+.fa-ioxhost {
+  --fa: "\f208";
+}
+
+.fa-fonticons-fi {
+  --fa: "\f3a2";
+}
+
+.fa-app-store {
+  --fa: "\f36f";
+}
+
+.fa-cc-mastercard {
+  --fa: "\f1f1";
+}
+
+.fa-itunes-note {
+  --fa: "\f3b5";
+}
+
+.fa-golang {
+  --fa: "\e40f";
+}
+
+.fa-kickstarter {
+  --fa: "\f3bb";
+}
+
+.fa-square-kickstarter {
+  --fa: "\f3bb";
+}
+
+.fa-grav {
+  --fa: "\f2d6";
+}
+
+.fa-weibo {
+  --fa: "\f18a";
+}
+
+.fa-uncharted {
+  --fa: "\e084";
+}
+
+.fa-firstdraft {
+  --fa: "\f3a1";
+}
+
+.fa-square-youtube {
+  --fa: "\f431";
+}
+
+.fa-youtube-square {
+  --fa: "\f431";
+}
+
+.fa-wikipedia-w {
+  --fa: "\f266";
+}
+
+.fa-wpressr {
+  --fa: "\f3e4";
+}
+
+.fa-rendact {
+  --fa: "\f3e4";
+}
+
+.fa-angellist {
+  --fa: "\f209";
+}
+
+.fa-galactic-republic {
+  --fa: "\f50c";
+}
+
+.fa-nfc-directional {
+  --fa: "\e530";
+}
+
+.fa-skype {
+  --fa: "\f17e";
+}
+
+.fa-joget {
+  --fa: "\f3b7";
+}
+
+.fa-fedora {
+  --fa: "\f798";
+}
+
+.fa-stripe-s {
+  --fa: "\f42a";
+}
+
+.fa-meta {
+  --fa: "\e49b";
+}
+
+.fa-laravel {
+  --fa: "\f3bd";
+}
+
+.fa-hotjar {
+  --fa: "\f3b1";
+}
+
+.fa-bluetooth-b {
+  --fa: "\f294";
+}
+
+.fa-square-letterboxd {
+  --fa: "\e62e";
+}
+
+.fa-sticker-mule {
+  --fa: "\f3f7";
+}
+
+.fa-creative-commons-zero {
+  --fa: "\f4f3";
+}
+
+.fa-hips {
+  --fa: "\f452";
+}
+
+.fa-css {
+  --fa: "\e6a2";
+}
+
+.fa-behance {
+  --fa: "\f1b4";
+}
+
+.fa-reddit {
+  --fa: "\f1a1";
+}
+
+.fa-discord {
+  --fa: "\f392";
+}
+
+.fa-chrome {
+  --fa: "\f268";
+}
+
+.fa-app-store-ios {
+  --fa: "\f370";
+}
+
+.fa-cc-discover {
+  --fa: "\f1f2";
+}
+
+.fa-wpbeginner {
+  --fa: "\f297";
+}
+
+.fa-confluence {
+  --fa: "\f78d";
+}
+
+.fa-shoelace {
+  --fa: "\e60c";
+}
+
+.fa-mdb {
+  --fa: "\f8ca";
+}
+
+.fa-dochub {
+  --fa: "\f394";
+}
+
+.fa-accessible-icon {
+  --fa: "\f368";
+}
+
+.fa-ebay {
+  --fa: "\f4f4";
+}
+
+.fa-amazon {
+  --fa: "\f270";
+}
+
+.fa-unsplash {
+  --fa: "\e07c";
+}
+
+.fa-yarn {
+  --fa: "\f7e3";
+}
+
+.fa-square-steam {
+  --fa: "\f1b7";
+}
+
+.fa-steam-square {
+  --fa: "\f1b7";
+}
+
+.fa-500px {
+  --fa: "\f26e";
+}
+
+.fa-square-vimeo {
+  --fa: "\f194";
+}
+
+.fa-vimeo-square {
+  --fa: "\f194";
+}
+
+.fa-asymmetrik {
+  --fa: "\f372";
+}
+
+.fa-font-awesome {
+  --fa: "\f2b4";
+}
+
+.fa-font-awesome-flag {
+  --fa: "\f2b4";
+}
+
+.fa-font-awesome-logo-full {
+  --fa: "\f2b4";
+}
+
+.fa-gratipay {
+  --fa: "\f184";
+}
+
+.fa-apple {
+  --fa: "\f179";
+}
+
+.fa-hive {
+  --fa: "\e07f";
+}
+
+.fa-gitkraken {
+  --fa: "\f3a6";
+}
+
+.fa-keybase {
+  --fa: "\f4f5";
+}
+
+.fa-apple-pay {
+  --fa: "\f415";
+}
+
+.fa-padlet {
+  --fa: "\e4a0";
+}
+
+.fa-amazon-pay {
+  --fa: "\f42c";
+}
+
+.fa-square-github {
+  --fa: "\f092";
+}
+
+.fa-github-square {
+  --fa: "\f092";
+}
+
+.fa-stumbleupon {
+  --fa: "\f1a4";
+}
+
+.fa-fedex {
+  --fa: "\f797";
+}
+
+.fa-phoenix-framework {
+  --fa: "\f3dc";
+}
+
+.fa-shopify {
+  --fa: "\e057";
+}
+
+.fa-neos {
+  --fa: "\f612";
+}
+
+.fa-square-threads {
+  --fa: "\e619";
+}
+
+.fa-hackerrank {
+  --fa: "\f5f7";
+}
+
+.fa-researchgate {
+  --fa: "\f4f8";
+}
+
+.fa-swift {
+  --fa: "\f8e1";
+}
+
+.fa-angular {
+  --fa: "\f420";
+}
+
+.fa-speakap {
+  --fa: "\f3f3";
+}
+
+.fa-angrycreative {
+  --fa: "\f36e";
+}
+
+.fa-y-combinator {
+  --fa: "\f23b";
+}
+
+.fa-empire {
+  --fa: "\f1d1";
+}
+
+.fa-envira {
+  --fa: "\f299";
+}
+
+.fa-google-scholar {
+  --fa: "\e63b";
+}
+
+.fa-square-gitlab {
+  --fa: "\e5ae";
+}
+
+.fa-gitlab-square {
+  --fa: "\e5ae";
+}
+
+.fa-studiovinari {
+  --fa: "\f3f8";
+}
+
+.fa-pied-piper {
+  --fa: "\f2ae";
+}
+
+.fa-wordpress {
+  --fa: "\f19a";
+}
+
+.fa-product-hunt {
+  --fa: "\f288";
+}
+
+.fa-firefox {
+  --fa: "\f269";
+}
+
+.fa-linode {
+  --fa: "\f2b8";
+}
+
+.fa-goodreads {
+  --fa: "\f3a8";
+}
+
+.fa-square-odnoklassniki {
+  --fa: "\f264";
+}
+
+.fa-odnoklassniki-square {
+  --fa: "\f264";
+}
+
+.fa-jsfiddle {
+  --fa: "\f1cc";
+}
+
+.fa-sith {
+  --fa: "\f512";
+}
+
+.fa-themeisle {
+  --fa: "\f2b2";
+}
+
+.fa-page4 {
+  --fa: "\f3d7";
+}
+
+.fa-hashnode {
+  --fa: "\e499";
+}
+
+.fa-react {
+  --fa: "\f41b";
+}
+
+.fa-cc-paypal {
+  --fa: "\f1f4";
+}
+
+.fa-squarespace {
+  --fa: "\f5be";
+}
+
+.fa-cc-stripe {
+  --fa: "\f1f5";
+}
+
+.fa-creative-commons-share {
+  --fa: "\f4f2";
+}
+
+.fa-bitcoin {
+  --fa: "\f379";
+}
+
+.fa-keycdn {
+  --fa: "\f3ba";
+}
+
+.fa-opera {
+  --fa: "\f26a";
+}
+
+.fa-itch-io {
+  --fa: "\f83a";
+}
+
+.fa-umbraco {
+  --fa: "\f8e8";
+}
+
+.fa-galactic-senate {
+  --fa: "\f50d";
+}
+
+.fa-ubuntu {
+  --fa: "\f7df";
+}
+
+.fa-draft2digital {
+  --fa: "\f396";
+}
+
+.fa-stripe {
+  --fa: "\f429";
+}
+
+.fa-houzz {
+  --fa: "\f27c";
+}
+
+.fa-gg {
+  --fa: "\f260";
+}
+
+.fa-dhl {
+  --fa: "\f790";
+}
+
+.fa-square-pinterest {
+  --fa: "\f0d3";
+}
+
+.fa-pinterest-square {
+  --fa: "\f0d3";
+}
+
+.fa-xing {
+  --fa: "\f168";
+}
+
+.fa-blackberry {
+  --fa: "\f37b";
+}
+
+.fa-creative-commons-pd {
+  --fa: "\f4ec";
+}
+
+.fa-playstation {
+  --fa: "\f3df";
+}
+
+.fa-quinscape {
+  --fa: "\f459";
+}
+
+.fa-less {
+  --fa: "\f41d";
+}
+
+.fa-blogger-b {
+  --fa: "\f37d";
+}
+
+.fa-opencart {
+  --fa: "\f23d";
+}
+
+.fa-vine {
+  --fa: "\f1ca";
+}
+
+.fa-signal-messenger {
+  --fa: "\e663";
+}
+
+.fa-paypal {
+  --fa: "\f1ed";
+}
+
+.fa-gitlab {
+  --fa: "\f296";
+}
+
+.fa-typo3 {
+  --fa: "\f42b";
+}
+
+.fa-reddit-alien {
+  --fa: "\f281";
+}
+
+.fa-yahoo {
+  --fa: "\f19e";
+}
+
+.fa-dailymotion {
+  --fa: "\e052";
+}
+
+.fa-affiliatetheme {
+  --fa: "\f36b";
+}
+
+.fa-pied-piper-pp {
+  --fa: "\f1a7";
+}
+
+.fa-bootstrap {
+  --fa: "\f836";
+}
+
+.fa-odnoklassniki {
+  --fa: "\f263";
+}
+
+.fa-nfc-symbol {
+  --fa: "\e531";
+}
+
+.fa-mintbit {
+  --fa: "\e62f";
+}
+
+.fa-ethereum {
+  --fa: "\f42e";
+}
+
+.fa-speaker-deck {
+  --fa: "\f83c";
+}
+
+.fa-creative-commons-nc-eu {
+  --fa: "\f4e9";
+}
+
+.fa-patreon {
+  --fa: "\f3d9";
+}
+
+.fa-avianex {
+  --fa: "\f374";
+}
+
+.fa-ello {
+  --fa: "\f5f1";
+}
+
+.fa-gofore {
+  --fa: "\f3a7";
+}
+
+.fa-bimobject {
+  --fa: "\f378";
+}
+
+.fa-brave-reverse {
+  --fa: "\e63d";
+}
+
+.fa-facebook-f {
+  --fa: "\f39e";
+}
+
+.fa-square-google-plus {
+  --fa: "\f0d4";
+}
+
+.fa-google-plus-square {
+  --fa: "\f0d4";
+}
+
+.fa-web-awesome {
+  --fa: "\e682";
+}
+
+.fa-mandalorian {
+  --fa: "\f50f";
+}
+
+.fa-first-order-alt {
+  --fa: "\f50a";
+}
+
+.fa-osi {
+  --fa: "\f41a";
+}
+
+.fa-google-wallet {
+  --fa: "\f1ee";
+}
+
+.fa-d-and-d-beyond {
+  --fa: "\f6ca";
+}
+
+.fa-periscope {
+  --fa: "\f3da";
+}
+
+.fa-fulcrum {
+  --fa: "\f50b";
+}
+
+.fa-cloudscale {
+  --fa: "\f383";
+}
+
+.fa-forumbee {
+  --fa: "\f211";
+}
+
+.fa-mizuni {
+  --fa: "\f3cc";
+}
+
+.fa-schlix {
+  --fa: "\f3ea";
+}
+
+.fa-square-xing {
+  --fa: "\f169";
+}
+
+.fa-xing-square {
+  --fa: "\f169";
+}
+
+.fa-bandcamp {
+  --fa: "\f2d5";
+}
+
+.fa-wpforms {
+  --fa: "\f298";
+}
+
+.fa-cloudversify {
+  --fa: "\f385";
+}
+
+.fa-usps {
+  --fa: "\f7e1";
+}
+
+.fa-megaport {
+  --fa: "\f5a3";
+}
+
+.fa-magento {
+  --fa: "\f3c4";
+}
+
+.fa-spotify {
+  --fa: "\f1bc";
+}
+
+.fa-optin-monster {
+  --fa: "\f23c";
+}
+
+.fa-fly {
+  --fa: "\f417";
+}
+
+.fa-square-bluesky {
+  --fa: "\e6a3";
+}
+
+.fa-aviato {
+  --fa: "\f421";
+}
+
+.fa-itunes {
+  --fa: "\f3b4";
+}
+
+.fa-cuttlefish {
+  --fa: "\f38c";
+}
+
+.fa-blogger {
+  --fa: "\f37c";
+}
+
+.fa-flickr {
+  --fa: "\f16e";
+}
+
+.fa-viber {
+  --fa: "\f409";
+}
+
+.fa-soundcloud {
+  --fa: "\f1be";
+}
+
+.fa-digg {
+  --fa: "\f1a6";
+}
+
+.fa-tencent-weibo {
+  --fa: "\f1d5";
+}
+
+.fa-letterboxd {
+  --fa: "\e62d";
+}
+
+.fa-symfony {
+  --fa: "\f83d";
+}
+
+.fa-maxcdn {
+  --fa: "\f136";
+}
+
+.fa-etsy {
+  --fa: "\f2d7";
+}
+
+.fa-facebook-messenger {
+  --fa: "\f39f";
+}
+
+.fa-audible {
+  --fa: "\f373";
+}
+
+.fa-think-peaks {
+  --fa: "\f731";
+}
+
+.fa-bilibili {
+  --fa: "\e3d9";
+}
+
+.fa-erlang {
+  --fa: "\f39d";
+}
+
+.fa-x-twitter {
+  --fa: "\e61b";
+}
+
+.fa-cotton-bureau {
+  --fa: "\f89e";
+}
+
+.fa-dashcube {
+  --fa: "\f210";
+}
+
+.fa-42-group {
+  --fa: "\e080";
+}
+
+.fa-innosoft {
+  --fa: "\e080";
+}
+
+.fa-stack-exchange {
+  --fa: "\f18d";
+}
+
+.fa-elementor {
+  --fa: "\f430";
+}
+
+.fa-square-pied-piper {
+  --fa: "\e01e";
+}
+
+.fa-pied-piper-square {
+  --fa: "\e01e";
+}
+
+.fa-creative-commons-nd {
+  --fa: "\f4eb";
+}
+
+.fa-palfed {
+  --fa: "\f3d8";
+}
+
+.fa-superpowers {
+  --fa: "\f2dd";
+}
+
+.fa-resolving {
+  --fa: "\f3e7";
+}
+
+.fa-xbox {
+  --fa: "\f412";
+}
+
+.fa-square-web-awesome-stroke {
+  --fa: "\e684";
+}
+
+.fa-searchengin {
+  --fa: "\f3eb";
+}
+
+.fa-tiktok {
+  --fa: "\e07b";
+}
+
+.fa-square-facebook {
+  --fa: "\f082";
+}
+
+.fa-facebook-square {
+  --fa: "\f082";
+}
+
+.fa-renren {
+  --fa: "\f18b";
+}
+
+.fa-linux {
+  --fa: "\f17c";
+}
+
+.fa-glide {
+  --fa: "\f2a5";
+}
+
+.fa-linkedin {
+  --fa: "\f08c";
+}
+
+.fa-hubspot {
+  --fa: "\f3b2";
+}
+
+.fa-deploydog {
+  --fa: "\f38e";
+}
+
+.fa-twitch {
+  --fa: "\f1e8";
+}
+
+.fa-flutter {
+  --fa: "\e694";
+}
+
+.fa-ravelry {
+  --fa: "\f2d9";
+}
+
+.fa-mixer {
+  --fa: "\e056";
+}
+
+.fa-square-lastfm {
+  --fa: "\f203";
+}
+
+.fa-lastfm-square {
+  --fa: "\f203";
+}
+
+.fa-vimeo {
+  --fa: "\f40a";
+}
+
+.fa-mendeley {
+  --fa: "\f7b3";
+}
+
+.fa-uniregistry {
+  --fa: "\f404";
+}
+
+.fa-figma {
+  --fa: "\f799";
+}
+
+.fa-creative-commons-remix {
+  --fa: "\f4ee";
+}
+
+.fa-cc-amazon-pay {
+  --fa: "\f42d";
+}
+
+.fa-dropbox {
+  --fa: "\f16b";
+}
+
+.fa-instagram {
+  --fa: "\f16d";
+}
+
+.fa-cmplid {
+  --fa: "\e360";
+}
+
+.fa-upwork {
+  --fa: "\e641";
+}
+
+.fa-facebook {
+  --fa: "\f09a";
+}
+
+.fa-gripfire {
+  --fa: "\f3ac";
+}
+
+.fa-jedi-order {
+  --fa: "\f50e";
+}
+
+.fa-uikit {
+  --fa: "\f403";
+}
+
+.fa-fort-awesome-alt {
+  --fa: "\f3a3";
+}
+
+.fa-phabricator {
+  --fa: "\f3db";
+}
+
+.fa-ussunnah {
+  --fa: "\f407";
+}
+
+.fa-earlybirds {
+  --fa: "\f39a";
+}
+
+.fa-trade-federation {
+  --fa: "\f513";
+}
+
+.fa-autoprefixer {
+  --fa: "\f41c";
+}
+
+.fa-whatsapp {
+  --fa: "\f232";
+}
+
+.fa-square-upwork {
+  --fa: "\e67c";
+}
+
+.fa-slideshare {
+  --fa: "\f1e7";
+}
+
+.fa-google-play {
+  --fa: "\f3ab";
+}
+
+.fa-viadeo {
+  --fa: "\f2a9";
+}
+
+.fa-line {
+  --fa: "\f3c0";
+}
+
+.fa-google-drive {
+  --fa: "\f3aa";
+}
+
+.fa-servicestack {
+  --fa: "\f3ec";
+}
+
+.fa-simplybuilt {
+  --fa: "\f215";
+}
+
+.fa-bitbucket {
+  --fa: "\f171";
+}
+
+.fa-imdb {
+  --fa: "\f2d8";
+}
+
+.fa-deezer {
+  --fa: "\e077";
+}
+
+.fa-raspberry-pi {
+  --fa: "\f7bb";
+}
+
+.fa-jira {
+  --fa: "\f7b1";
+}
+
+.fa-docker {
+  --fa: "\f395";
+}
+
+.fa-screenpal {
+  --fa: "\e570";
+}
+
+.fa-bluetooth {
+  --fa: "\f293";
+}
+
+.fa-gitter {
+  --fa: "\f426";
+}
+
+.fa-d-and-d {
+  --fa: "\f38d";
+}
+
+.fa-microblog {
+  --fa: "\e01a";
+}
+
+.fa-cc-diners-club {
+  --fa: "\f24c";
+}
+
+.fa-gg-circle {
+  --fa: "\f261";
+}
+
+.fa-pied-piper-hat {
+  --fa: "\f4e5";
+}
+
+.fa-kickstarter-k {
+  --fa: "\f3bc";
+}
+
+.fa-yandex {
+  --fa: "\f413";
+}
+
+.fa-readme {
+  --fa: "\f4d5";
+}
+
+.fa-html5 {
+  --fa: "\f13b";
+}
+
+.fa-sellsy {
+  --fa: "\f213";
+}
+
+.fa-square-web-awesome {
+  --fa: "\e683";
+}
+
+.fa-sass {
+  --fa: "\f41e";
+}
+
+.fa-wirsindhandwerk {
+  --fa: "\e2d0";
+}
+
+.fa-wsh {
+  --fa: "\e2d0";
+}
+
+.fa-buromobelexperte {
+  --fa: "\f37f";
+}
+
+.fa-salesforce {
+  --fa: "\f83b";
+}
+
+.fa-octopus-deploy {
+  --fa: "\e082";
+}
+
+.fa-medapps {
+  --fa: "\f3c6";
+}
+
+.fa-ns8 {
+  --fa: "\f3d5";
+}
+
+.fa-pinterest-p {
+  --fa: "\f231";
+}
+
+.fa-apper {
+  --fa: "\f371";
+}
+
+.fa-fort-awesome {
+  --fa: "\f286";
+}
+
+.fa-waze {
+  --fa: "\f83f";
+}
+
+.fa-bluesky {
+  --fa: "\e671";
+}
+
+.fa-cc-jcb {
+  --fa: "\f24b";
+}
+
+.fa-snapchat {
+  --fa: "\f2ab";
+}
+
+.fa-snapchat-ghost {
+  --fa: "\f2ab";
+}
+
+.fa-fantasy-flight-games {
+  --fa: "\f6dc";
+}
+
+.fa-rust {
+  --fa: "\e07a";
+}
+
+.fa-wix {
+  --fa: "\f5cf";
+}
+
+.fa-square-behance {
+  --fa: "\f1b5";
+}
+
+.fa-behance-square {
+  --fa: "\f1b5";
+}
+
+.fa-supple {
+  --fa: "\f3f9";
+}
+
+.fa-webflow {
+  --fa: "\e65c";
+}
+
+.fa-rebel {
+  --fa: "\f1d0";
+}
+
+.fa-css3 {
+  --fa: "\f13c";
+}
+
+.fa-staylinked {
+  --fa: "\f3f5";
+}
+
+.fa-kaggle {
+  --fa: "\f5fa";
+}
+
+.fa-space-awesome {
+  --fa: "\e5ac";
+}
+
+.fa-deviantart {
+  --fa: "\f1bd";
+}
+
+.fa-cpanel {
+  --fa: "\f388";
+}
+
+.fa-goodreads-g {
+  --fa: "\f3a9";
+}
+
+.fa-square-git {
+  --fa: "\f1d2";
+}
+
+.fa-git-square {
+  --fa: "\f1d2";
+}
+
+.fa-square-tumblr {
+  --fa: "\f174";
+}
+
+.fa-tumblr-square {
+  --fa: "\f174";
+}
+
+.fa-trello {
+  --fa: "\f181";
+}
+
+.fa-creative-commons-nc-jp {
+  --fa: "\f4ea";
+}
+
+.fa-get-pocket {
+  --fa: "\f265";
+}
+
+.fa-perbyte {
+  --fa: "\e083";
+}
+
+.fa-grunt {
+  --fa: "\f3ad";
+}
+
+.fa-weebly {
+  --fa: "\f5cc";
+}
+
+.fa-connectdevelop {
+  --fa: "\f20e";
+}
+
+.fa-leanpub {
+  --fa: "\f212";
+}
+
+.fa-black-tie {
+  --fa: "\f27e";
+}
+
+.fa-themeco {
+  --fa: "\f5c6";
+}
+
+.fa-python {
+  --fa: "\f3e2";
+}
+
+.fa-android {
+  --fa: "\f17b";
+}
+
+.fa-bots {
+  --fa: "\e340";
+}
+
+.fa-free-code-camp {
+  --fa: "\f2c5";
+}
+
+.fa-hornbill {
+  --fa: "\f592";
+}
+
+.fa-js {
+  --fa: "\f3b8";
+}
+
+.fa-ideal {
+  --fa: "\e013";
+}
+
+.fa-git {
+  --fa: "\f1d3";
+}
+
+.fa-dev {
+  --fa: "\f6cc";
+}
+
+.fa-sketch {
+  --fa: "\f7c6";
+}
+
+.fa-yandex-international {
+  --fa: "\f414";
+}
+
+.fa-cc-amex {
+  --fa: "\f1f3";
+}
+
+.fa-uber {
+  --fa: "\f402";
+}
+
+.fa-github {
+  --fa: "\f09b";
+}
+
+.fa-php {
+  --fa: "\f457";
+}
+
+.fa-alipay {
+  --fa: "\f642";
+}
+
+.fa-youtube {
+  --fa: "\f167";
+}
+
+.fa-skyatlas {
+  --fa: "\f216";
+}
+
+.fa-firefox-browser {
+  --fa: "\e007";
+}
+
+.fa-replyd {
+  --fa: "\f3e6";
+}
+
+.fa-suse {
+  --fa: "\f7d6";
+}
+
+.fa-jenkins {
+  --fa: "\f3b6";
+}
+
+.fa-twitter {
+  --fa: "\f099";
+}
+
+.fa-rockrms {
+  --fa: "\f3e9";
+}
+
+.fa-pinterest {
+  --fa: "\f0d2";
+}
+
+.fa-buffer {
+  --fa: "\f837";
+}
+
+.fa-npm {
+  --fa: "\f3d4";
+}
+
+.fa-yammer {
+  --fa: "\f840";
+}
+
+.fa-btc {
+  --fa: "\f15a";
+}
+
+.fa-dribbble {
+  --fa: "\f17d";
+}
+
+.fa-stumbleupon-circle {
+  --fa: "\f1a3";
+}
+
+.fa-internet-explorer {
+  --fa: "\f26b";
+}
+
+.fa-stubber {
+  --fa: "\e5c7";
+}
+
+.fa-telegram {
+  --fa: "\f2c6";
+}
+
+.fa-telegram-plane {
+  --fa: "\f2c6";
+}
+
+.fa-old-republic {
+  --fa: "\f510";
+}
+
+.fa-odysee {
+  --fa: "\e5c6";
+}
+
+.fa-square-whatsapp {
+  --fa: "\f40c";
+}
+
+.fa-whatsapp-square {
+  --fa: "\f40c";
+}
+
+.fa-node-js {
+  --fa: "\f3d3";
+}
+
+.fa-edge-legacy {
+  --fa: "\e078";
+}
+
+.fa-slack {
+  --fa: "\f198";
+}
+
+.fa-slack-hash {
+  --fa: "\f198";
+}
+
+.fa-medrt {
+  --fa: "\f3c8";
+}
+
+.fa-usb {
+  --fa: "\f287";
+}
+
+.fa-tumblr {
+  --fa: "\f173";
+}
+
+.fa-vaadin {
+  --fa: "\f408";
+}
+
+.fa-quora {
+  --fa: "\f2c4";
+}
+
+.fa-square-x-twitter {
+  --fa: "\e61a";
+}
+
+.fa-reacteurope {
+  --fa: "\f75d";
+}
+
+.fa-medium {
+  --fa: "\f23a";
+}
+
+.fa-medium-m {
+  --fa: "\f23a";
+}
+
+.fa-amilia {
+  --fa: "\f36d";
+}
+
+.fa-mixcloud {
+  --fa: "\f289";
+}
+
+.fa-flipboard {
+  --fa: "\f44d";
+}
+
+.fa-viacoin {
+  --fa: "\f237";
+}
+
+.fa-critical-role {
+  --fa: "\f6c9";
+}
+
+.fa-sitrox {
+  --fa: "\e44a";
+}
+
+.fa-discourse {
+  --fa: "\f393";
+}
+
+.fa-joomla {
+  --fa: "\f1aa";
+}
+
+.fa-mastodon {
+  --fa: "\f4f6";
+}
+
+.fa-airbnb {
+  --fa: "\f834";
+}
+
+.fa-wolf-pack-battalion {
+  --fa: "\f514";
+}
+
+.fa-buy-n-large {
+  --fa: "\f8a6";
+}
+
+.fa-gulp {
+  --fa: "\f3ae";
+}
+
+.fa-creative-commons-sampling-plus {
+  --fa: "\f4f1";
+}
+
+.fa-strava {
+  --fa: "\f428";
+}
+
+.fa-ember {
+  --fa: "\f423";
+}
+
+.fa-canadian-maple-leaf {
+  --fa: "\f785";
+}
+
+.fa-teamspeak {
+  --fa: "\f4f9";
+}
+
+.fa-pushed {
+  --fa: "\f3e1";
+}
+
+.fa-wordpress-simple {
+  --fa: "\f411";
+}
+
+.fa-nutritionix {
+  --fa: "\f3d6";
+}
+
+.fa-wodu {
+  --fa: "\e088";
+}
+
+.fa-google-pay {
+  --fa: "\e079";
+}
+
+.fa-intercom {
+  --fa: "\f7af";
+}
+
+.fa-zhihu {
+  --fa: "\f63f";
+}
+
+.fa-korvue {
+  --fa: "\f42f";
+}
+
+.fa-pix {
+  --fa: "\e43a";
+}
+
+.fa-steam-symbol {
+  --fa: "\f3f6";
+}
+
+/*!
+ * Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2024 Fonticons, Inc.
  */
-body {
-  margin: 0;
+.fa.fa-glass {
+  --fa: "\f000";
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
-main {
-  display: block;
+.fa.fa-envelope-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+.fa.fa-envelope-o {
+  --fa: "\f0e0";
 }
 
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+.fa.fa-star-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+.fa.fa-star-o {
+  --fa: "\f005";
 }
 
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-  background-color: transparent;
+.fa.fa-remove {
+  --fa: "\f00d";
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
+.fa.fa-close {
+  --fa: "\f00d";
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder;
+.fa.fa-gear {
+  --fa: "\f013";
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+.fa.fa-trash-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%;
+.fa.fa-trash-o {
+  --fa: "\f2ed";
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
+.fa.fa-home {
+  --fa: "\f015";
 }
 
-sub {
-  bottom: -0.25em;
+.fa.fa-file-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-sup {
-  top: -0.5em;
+.fa.fa-file-o {
+  --fa: "\f15b";
 }
 
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
-img {
-  border-style: none;
+.fa.fa-clock-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+.fa.fa-clock-o {
+  --fa: "\f017";
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input { /* 1 */
-  overflow: visible;
+.fa.fa-arrow-circle-o-down {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select { /* 1 */
-  text-transform: none;
+.fa.fa-arrow-circle-o-down {
+  --fa: "\f358";
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
+.fa.fa-arrow-circle-o-up {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+.fa.fa-arrow-circle-o-up {
+  --fa: "\f35b";
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+.fa.fa-play-circle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/**
- * Correct the padding in Firefox.
- */
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
+.fa.fa-play-circle-o {
+  --fa: "\f144";
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+.fa.fa-repeat {
+  --fa: "\f01e";
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline;
+.fa.fa-rotate-right {
+  --fa: "\f01e";
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto;
+.fa.fa-refresh {
+  --fa: "\f021";
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+.fa.fa-list-alt {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
+.fa.fa-list-alt {
+  --fa: "\f022";
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+.fa.fa-dedent {
+  --fa: "\f03b";
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
+.fa.fa-video-camera {
+  --fa: "\f03d";
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+.fa.fa-picture-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-  display: block;
+.fa.fa-picture-o {
+  --fa: "\f03e";
 }
 
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item;
+.fa.fa-photo {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
 }
 
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-  display: none;
+.fa.fa-photo {
+  --fa: "\f03e";
 }
 
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-  display: none;
+.fa.fa-image {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-image {
+  --fa: "\f03e";
+}
+
+.fa.fa-map-marker {
+  --fa: "\f3c5";
+}
+
+.fa.fa-pencil-square-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-pencil-square-o {
+  --fa: "\f044";
+}
+
+.fa.fa-edit {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-edit {
+  --fa: "\f044";
+}
+
+.fa.fa-share-square-o {
+  --fa: "\f14d";
+}
+
+.fa.fa-check-square-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-check-square-o {
+  --fa: "\f14a";
+}
+
+.fa.fa-arrows {
+  --fa: "\f0b2";
+}
+
+.fa.fa-times-circle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-times-circle-o {
+  --fa: "\f057";
+}
+
+.fa.fa-check-circle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-check-circle-o {
+  --fa: "\f058";
+}
+
+.fa.fa-mail-forward {
+  --fa: "\f064";
+}
+
+.fa.fa-expand {
+  --fa: "\f424";
+}
+
+.fa.fa-compress {
+  --fa: "\f422";
+}
+
+.fa.fa-eye {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-eye-slash {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-warning {
+  --fa: "\f071";
+}
+
+.fa.fa-calendar {
+  --fa: "\f073";
+}
+
+.fa.fa-arrows-v {
+  --fa: "\f338";
+}
+
+.fa.fa-arrows-h {
+  --fa: "\f337";
+}
+
+.fa.fa-bar-chart {
+  --fa: "\e0e3";
+}
+
+.fa.fa-bar-chart-o {
+  --fa: "\e0e3";
+}
+
+.fa.fa-twitter-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-twitter-square {
+  --fa: "\f081";
+}
+
+.fa.fa-facebook-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook-square {
+  --fa: "\f082";
+}
+
+.fa.fa-gears {
+  --fa: "\f085";
+}
+
+.fa.fa-thumbs-o-up {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-thumbs-o-up {
+  --fa: "\f164";
+}
+
+.fa.fa-thumbs-o-down {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-thumbs-o-down {
+  --fa: "\f165";
+}
+
+.fa.fa-heart-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-heart-o {
+  --fa: "\f004";
+}
+
+.fa.fa-sign-out {
+  --fa: "\f2f5";
+}
+
+.fa.fa-linkedin-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-linkedin-square {
+  --fa: "\f08c";
+}
+
+.fa.fa-thumb-tack {
+  --fa: "\f08d";
+}
+
+.fa.fa-external-link {
+  --fa: "\f35d";
+}
+
+.fa.fa-sign-in {
+  --fa: "\f2f6";
+}
+
+.fa.fa-github-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-github-square {
+  --fa: "\f092";
+}
+
+.fa.fa-lemon-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-lemon-o {
+  --fa: "\f094";
+}
+
+.fa.fa-square-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-square-o {
+  --fa: "\f0c8";
+}
+
+.fa.fa-bookmark-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-bookmark-o {
+  --fa: "\f02e";
+}
+
+.fa.fa-twitter {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook {
+  --fa: "\f39e";
+}
+
+.fa.fa-facebook-f {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook-f {
+  --fa: "\f39e";
+}
+
+.fa.fa-github {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-credit-card {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-feed {
+  --fa: "\f09e";
+}
+
+.fa.fa-hdd-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hdd-o {
+  --fa: "\f0a0";
+}
+
+.fa.fa-hand-o-right {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-o-right {
+  --fa: "\f0a4";
+}
+
+.fa.fa-hand-o-left {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-o-left {
+  --fa: "\f0a5";
+}
+
+.fa.fa-hand-o-up {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-o-up {
+  --fa: "\f0a6";
+}
+
+.fa.fa-hand-o-down {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-o-down {
+  --fa: "\f0a7";
+}
+
+.fa.fa-globe {
+  --fa: "\f57d";
+}
+
+.fa.fa-tasks {
+  --fa: "\f828";
+}
+
+.fa.fa-arrows-alt {
+  --fa: "\f31e";
+}
+
+.fa.fa-group {
+  --fa: "\f0c0";
+}
+
+.fa.fa-chain {
+  --fa: "\f0c1";
+}
+
+.fa.fa-cut {
+  --fa: "\f0c4";
+}
+
+.fa.fa-files-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-files-o {
+  --fa: "\f0c5";
+}
+
+.fa.fa-floppy-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-floppy-o {
+  --fa: "\f0c7";
+}
+
+.fa.fa-save {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-save {
+  --fa: "\f0c7";
+}
+
+.fa.fa-navicon {
+  --fa: "\f0c9";
+}
+
+.fa.fa-reorder {
+  --fa: "\f0c9";
+}
+
+.fa.fa-magic {
+  --fa: "\e2ca";
+}
+
+.fa.fa-pinterest {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pinterest-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pinterest-square {
+  --fa: "\f0d3";
+}
+
+.fa.fa-google-plus-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus-square {
+  --fa: "\f0d4";
+}
+
+.fa.fa-google-plus {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus {
+  --fa: "\f0d5";
+}
+
+.fa.fa-money {
+  --fa: "\f3d1";
+}
+
+.fa.fa-unsorted {
+  --fa: "\f0dc";
+}
+
+.fa.fa-sort-desc {
+  --fa: "\f0dd";
+}
+
+.fa.fa-sort-asc {
+  --fa: "\f0de";
+}
+
+.fa.fa-linkedin {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-linkedin {
+  --fa: "\f0e1";
+}
+
+.fa.fa-rotate-left {
+  --fa: "\f0e2";
+}
+
+.fa.fa-legal {
+  --fa: "\f0e3";
+}
+
+.fa.fa-tachometer {
+  --fa: "\f625";
+}
+
+.fa.fa-dashboard {
+  --fa: "\f625";
+}
+
+.fa.fa-comment-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-comment-o {
+  --fa: "\f075";
+}
+
+.fa.fa-comments-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-comments-o {
+  --fa: "\f086";
+}
+
+.fa.fa-flash {
+  --fa: "\f0e7";
+}
+
+.fa.fa-clipboard {
+  --fa: "\f0ea";
+}
+
+.fa.fa-lightbulb-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-lightbulb-o {
+  --fa: "\f0eb";
+}
+
+.fa.fa-exchange {
+  --fa: "\f362";
+}
+
+.fa.fa-cloud-download {
+  --fa: "\f0ed";
+}
+
+.fa.fa-cloud-upload {
+  --fa: "\f0ee";
+}
+
+.fa.fa-bell-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-bell-o {
+  --fa: "\f0f3";
+}
+
+.fa.fa-cutlery {
+  --fa: "\f2e7";
+}
+
+.fa.fa-file-text-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-text-o {
+  --fa: "\f15c";
+}
+
+.fa.fa-building-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-building-o {
+  --fa: "\f1ad";
+}
+
+.fa.fa-hospital-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hospital-o {
+  --fa: "\f0f8";
+}
+
+.fa.fa-tablet {
+  --fa: "\f3fa";
+}
+
+.fa.fa-mobile {
+  --fa: "\f3cd";
+}
+
+.fa.fa-mobile-phone {
+  --fa: "\f3cd";
+}
+
+.fa.fa-circle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-circle-o {
+  --fa: "\f111";
+}
+
+.fa.fa-mail-reply {
+  --fa: "\f3e5";
+}
+
+.fa.fa-github-alt {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-folder-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-folder-o {
+  --fa: "\f07b";
+}
+
+.fa.fa-folder-open-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-folder-open-o {
+  --fa: "\f07c";
+}
+
+.fa.fa-smile-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-smile-o {
+  --fa: "\f118";
+}
+
+.fa.fa-frown-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-frown-o {
+  --fa: "\f119";
+}
+
+.fa.fa-meh-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-meh-o {
+  --fa: "\f11a";
+}
+
+.fa.fa-keyboard-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-keyboard-o {
+  --fa: "\f11c";
+}
+
+.fa.fa-flag-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-flag-o {
+  --fa: "\f024";
+}
+
+.fa.fa-mail-reply-all {
+  --fa: "\f122";
+}
+
+.fa.fa-star-half-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-star-half-o {
+  --fa: "\f5c0";
+}
+
+.fa.fa-star-half-empty {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-star-half-empty {
+  --fa: "\f5c0";
+}
+
+.fa.fa-star-half-full {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-star-half-full {
+  --fa: "\f5c0";
+}
+
+.fa.fa-code-fork {
+  --fa: "\f126";
+}
+
+.fa.fa-chain-broken {
+  --fa: "\f127";
+}
+
+.fa.fa-unlink {
+  --fa: "\f127";
+}
+
+.fa.fa-calendar-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-o {
+  --fa: "\f133";
+}
+
+.fa.fa-maxcdn {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-html5 {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-css3 {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-unlock-alt {
+  --fa: "\f09c";
+}
+
+.fa.fa-minus-square-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-minus-square-o {
+  --fa: "\f146";
+}
+
+.fa.fa-level-up {
+  --fa: "\f3bf";
+}
+
+.fa.fa-level-down {
+  --fa: "\f3be";
+}
+
+.fa.fa-pencil-square {
+  --fa: "\f14b";
+}
+
+.fa.fa-external-link-square {
+  --fa: "\f360";
+}
+
+.fa.fa-compass {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-down {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-down {
+  --fa: "\f150";
+}
+
+.fa.fa-toggle-down {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-toggle-down {
+  --fa: "\f150";
+}
+
+.fa.fa-caret-square-o-up {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-up {
+  --fa: "\f151";
+}
+
+.fa.fa-toggle-up {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-toggle-up {
+  --fa: "\f151";
+}
+
+.fa.fa-caret-square-o-right {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-right {
+  --fa: "\f152";
+}
+
+.fa.fa-toggle-right {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-toggle-right {
+  --fa: "\f152";
+}
+
+.fa.fa-eur {
+  --fa: "\f153";
+}
+
+.fa.fa-euro {
+  --fa: "\f153";
+}
+
+.fa.fa-gbp {
+  --fa: "\f154";
+}
+
+.fa.fa-usd {
+  --fa: "\$";
+}
+
+.fa.fa-dollar {
+  --fa: "\$";
+}
+
+.fa.fa-inr {
+  --fa: "\e1bc";
+}
+
+.fa.fa-rupee {
+  --fa: "\e1bc";
+}
+
+.fa.fa-jpy {
+  --fa: "\f157";
+}
+
+.fa.fa-cny {
+  --fa: "\f157";
+}
+
+.fa.fa-rmb {
+  --fa: "\f157";
+}
+
+.fa.fa-yen {
+  --fa: "\f157";
+}
+
+.fa.fa-rub {
+  --fa: "\f158";
+}
+
+.fa.fa-ruble {
+  --fa: "\f158";
+}
+
+.fa.fa-rouble {
+  --fa: "\f158";
+}
+
+.fa.fa-krw {
+  --fa: "\f159";
+}
+
+.fa.fa-won {
+  --fa: "\f159";
+}
+
+.fa.fa-btc {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitcoin {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitcoin {
+  --fa: "\f15a";
+}
+
+.fa.fa-file-text {
+  --fa: "\f15c";
+}
+
+.fa.fa-sort-alpha-asc {
+  --fa: "\f15d";
+}
+
+.fa.fa-sort-alpha-desc {
+  --fa: "\f881";
+}
+
+.fa.fa-sort-amount-asc {
+  --fa: "\f884";
+}
+
+.fa.fa-sort-amount-desc {
+  --fa: "\f160";
+}
+
+.fa.fa-sort-numeric-asc {
+  --fa: "\f162";
+}
+
+.fa.fa-sort-numeric-desc {
+  --fa: "\f886";
+}
+
+.fa.fa-youtube-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-youtube-square {
+  --fa: "\f431";
+}
+
+.fa.fa-youtube {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-xing {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-xing-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-xing-square {
+  --fa: "\f169";
+}
+
+.fa.fa-youtube-play {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-youtube-play {
+  --fa: "\f167";
+}
+
+.fa.fa-dropbox {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-stack-overflow {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-instagram {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-flickr {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-adn {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitbucket {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitbucket-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bitbucket-square {
+  --fa: "\f171";
+}
+
+.fa.fa-tumblr {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-tumblr-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-tumblr-square {
+  --fa: "\f174";
+}
+
+.fa.fa-long-arrow-down {
+  --fa: "\f309";
+}
+
+.fa.fa-long-arrow-up {
+  --fa: "\f30c";
+}
+
+.fa.fa-long-arrow-left {
+  --fa: "\f30a";
+}
+
+.fa.fa-long-arrow-right {
+  --fa: "\f30b";
+}
+
+.fa.fa-apple {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-windows {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-android {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-linux {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-dribbble {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-skype {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-foursquare {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-trello {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gratipay {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gittip {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gittip {
+  --fa: "\f184";
+}
+
+.fa.fa-sun-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-sun-o {
+  --fa: "\f185";
+}
+
+.fa.fa-moon-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-moon-o {
+  --fa: "\f186";
+}
+
+.fa.fa-vk {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-weibo {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-renren {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pagelines {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-stack-exchange {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-arrow-circle-o-right {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-arrow-circle-o-right {
+  --fa: "\f35a";
+}
+
+.fa.fa-arrow-circle-o-left {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-arrow-circle-o-left {
+  --fa: "\f359";
+}
+
+.fa.fa-caret-square-o-left {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-caret-square-o-left {
+  --fa: "\f191";
+}
+
+.fa.fa-toggle-left {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-toggle-left {
+  --fa: "\f191";
+}
+
+.fa.fa-dot-circle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-dot-circle-o {
+  --fa: "\f192";
+}
+
+.fa.fa-vimeo-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-vimeo-square {
+  --fa: "\f194";
+}
+
+.fa.fa-try {
+  --fa: "\e2bb";
+}
+
+.fa.fa-turkish-lira {
+  --fa: "\e2bb";
+}
+
+.fa.fa-plus-square-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-plus-square-o {
+  --fa: "\f0fe";
+}
+
+.fa.fa-slack {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wordpress {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-openid {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-institution {
+  --fa: "\f19c";
+}
+
+.fa.fa-bank {
+  --fa: "\f19c";
+}
+
+.fa.fa-mortar-board {
+  --fa: "\f19d";
+}
+
+.fa.fa-yahoo {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-reddit {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-reddit-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-reddit-square {
+  --fa: "\f1a2";
+}
+
+.fa.fa-stumbleupon-circle {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-stumbleupon {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-delicious {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-digg {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pied-piper-pp {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pied-piper-alt {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-drupal {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-joomla {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-behance {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-behance-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-behance-square {
+  --fa: "\f1b5";
+}
+
+.fa.fa-steam {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-steam-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-steam-square {
+  --fa: "\f1b7";
+}
+
+.fa.fa-automobile {
+  --fa: "\f1b9";
+}
+
+.fa.fa-cab {
+  --fa: "\f1ba";
+}
+
+.fa.fa-spotify {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-deviantart {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-soundcloud {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-file-pdf-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-pdf-o {
+  --fa: "\f1c1";
+}
+
+.fa.fa-file-word-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-word-o {
+  --fa: "\f1c2";
+}
+
+.fa.fa-file-excel-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-excel-o {
+  --fa: "\f1c3";
+}
+
+.fa.fa-file-powerpoint-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-powerpoint-o {
+  --fa: "\f1c4";
+}
+
+.fa.fa-file-image-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-image-o {
+  --fa: "\f1c5";
+}
+
+.fa.fa-file-photo-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-photo-o {
+  --fa: "\f1c5";
+}
+
+.fa.fa-file-picture-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-picture-o {
+  --fa: "\f1c5";
+}
+
+.fa.fa-file-archive-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-archive-o {
+  --fa: "\f1c6";
+}
+
+.fa.fa-file-zip-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-zip-o {
+  --fa: "\f1c6";
+}
+
+.fa.fa-file-audio-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-audio-o {
+  --fa: "\f1c7";
+}
+
+.fa.fa-file-sound-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-sound-o {
+  --fa: "\f1c7";
+}
+
+.fa.fa-file-video-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-video-o {
+  --fa: "\f1c8";
+}
+
+.fa.fa-file-movie-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-movie-o {
+  --fa: "\f1c8";
+}
+
+.fa.fa-file-code-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-file-code-o {
+  --fa: "\f1c9";
+}
+
+.fa.fa-vine {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-codepen {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-jsfiddle {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-life-bouy {
+  --fa: "\f1cd";
+}
+
+.fa.fa-life-buoy {
+  --fa: "\f1cd";
+}
+
+.fa.fa-life-saver {
+  --fa: "\f1cd";
+}
+
+.fa.fa-support {
+  --fa: "\f1cd";
+}
+
+.fa.fa-circle-o-notch {
+  --fa: "\f1ce";
+}
+
+.fa.fa-rebel {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ra {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ra {
+  --fa: "\f1d0";
+}
+
+.fa.fa-resistance {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-resistance {
+  --fa: "\f1d0";
+}
+
+.fa.fa-empire {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ge {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ge {
+  --fa: "\f1d1";
+}
+
+.fa.fa-git-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-git-square {
+  --fa: "\f1d2";
+}
+
+.fa.fa-git {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-hacker-news {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-y-combinator-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-y-combinator-square {
+  --fa: "\f1d4";
+}
+
+.fa.fa-yc-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yc-square {
+  --fa: "\f1d4";
+}
+
+.fa.fa-tencent-weibo {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-qq {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-weixin {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wechat {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wechat {
+  --fa: "\f1d7";
+}
+
+.fa.fa-send {
+  --fa: "\f1d8";
+}
+
+.fa.fa-paper-plane-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-paper-plane-o {
+  --fa: "\f1d8";
+}
+
+.fa.fa-send-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-send-o {
+  --fa: "\f1d8";
+}
+
+.fa.fa-circle-thin {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-circle-thin {
+  --fa: "\f111";
+}
+
+.fa.fa-header {
+  --fa: "\f1dc";
+}
+
+.fa.fa-futbol-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-futbol-o {
+  --fa: "\f1e3";
+}
+
+.fa.fa-soccer-ball-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-soccer-ball-o {
+  --fa: "\f1e3";
+}
+
+.fa.fa-slideshare {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-twitch {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yelp {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-newspaper-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-newspaper-o {
+  --fa: "\f1ea";
+}
+
+.fa.fa-paypal {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-wallet {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-visa {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-mastercard {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-discover {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-amex {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-paypal {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-stripe {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bell-slash-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-bell-slash-o {
+  --fa: "\f1f6";
+}
+
+.fa.fa-trash {
+  --fa: "\f2ed";
+}
+
+.fa.fa-copyright {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-eyedropper {
+  --fa: "\f1fb";
+}
+
+.fa.fa-area-chart {
+  --fa: "\f1fe";
+}
+
+.fa.fa-pie-chart {
+  --fa: "\f200";
+}
+
+.fa.fa-line-chart {
+  --fa: "\f201";
+}
+
+.fa.fa-lastfm {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-lastfm-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-lastfm-square {
+  --fa: "\f203";
+}
+
+.fa.fa-ioxhost {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-angellist {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-cc {
+  --fa: "\f20a";
+}
+
+.fa.fa-ils {
+  --fa: "\f20b";
+}
+
+.fa.fa-shekel {
+  --fa: "\f20b";
+}
+
+.fa.fa-sheqel {
+  --fa: "\f20b";
+}
+
+.fa.fa-buysellads {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-connectdevelop {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-dashcube {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-forumbee {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-leanpub {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-sellsy {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-shirtsinbulk {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-simplybuilt {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-skyatlas {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-diamond {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-diamond {
+  --fa: "\f3a5";
+}
+
+.fa.fa-transgender {
+  --fa: "\f224";
+}
+
+.fa.fa-intersex {
+  --fa: "\f224";
+}
+
+.fa.fa-transgender-alt {
+  --fa: "\f225";
+}
+
+.fa.fa-facebook-official {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-facebook-official {
+  --fa: "\f09a";
+}
+
+.fa.fa-pinterest-p {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-whatsapp {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-hotel {
+  --fa: "\f236";
+}
+
+.fa.fa-viacoin {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-medium {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-y-combinator {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yc {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yc {
+  --fa: "\f23b";
+}
+
+.fa.fa-optin-monster {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-opencart {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-expeditedssl {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-battery-4 {
+  --fa: "\f240";
+}
+
+.fa.fa-battery {
+  --fa: "\f240";
+}
+
+.fa.fa-battery-3 {
+  --fa: "\f241";
+}
+
+.fa.fa-battery-2 {
+  --fa: "\f242";
+}
+
+.fa.fa-battery-1 {
+  --fa: "\f243";
+}
+
+.fa.fa-battery-0 {
+  --fa: "\f244";
+}
+
+.fa.fa-object-group {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-object-ungroup {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-sticky-note-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-sticky-note-o {
+  --fa: "\f249";
+}
+
+.fa.fa-cc-jcb {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-cc-diners-club {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-clone {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hourglass-o {
+  --fa: "\f254";
+}
+
+.fa.fa-hourglass-1 {
+  --fa: "\f251";
+}
+
+.fa.fa-hourglass-2 {
+  --fa: "\f252";
+}
+
+.fa.fa-hourglass-3 {
+  --fa: "\f253";
+}
+
+.fa.fa-hand-rock-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-rock-o {
+  --fa: "\f255";
+}
+
+.fa.fa-hand-grab-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-grab-o {
+  --fa: "\f255";
+}
+
+.fa.fa-hand-paper-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-paper-o {
+  --fa: "\f256";
+}
+
+.fa.fa-hand-stop-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-stop-o {
+  --fa: "\f256";
+}
+
+.fa.fa-hand-scissors-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-scissors-o {
+  --fa: "\f257";
+}
+
+.fa.fa-hand-lizard-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-lizard-o {
+  --fa: "\f258";
+}
+
+.fa.fa-hand-spock-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-spock-o {
+  --fa: "\f259";
+}
+
+.fa.fa-hand-pointer-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-pointer-o {
+  --fa: "\f25a";
+}
+
+.fa.fa-hand-peace-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-hand-peace-o {
+  --fa: "\f25b";
+}
+
+.fa.fa-registered {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-creative-commons {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gg {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gg-circle {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-odnoklassniki {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-odnoklassniki-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-odnoklassniki-square {
+  --fa: "\f264";
+}
+
+.fa.fa-get-pocket {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wikipedia-w {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-safari {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-chrome {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-firefox {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-opera {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-internet-explorer {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-television {
+  --fa: "\f26c";
+}
+
+.fa.fa-contao {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-500px {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-amazon {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-plus-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-plus-o {
+  --fa: "\f271";
+}
+
+.fa.fa-calendar-minus-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-minus-o {
+  --fa: "\f272";
+}
+
+.fa.fa-calendar-times-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-times-o {
+  --fa: "\f273";
+}
+
+.fa.fa-calendar-check-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-calendar-check-o {
+  --fa: "\f274";
+}
+
+.fa.fa-map-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-map-o {
+  --fa: "\f279";
+}
+
+.fa.fa-commenting {
+  --fa: "\f4ad";
+}
+
+.fa.fa-commenting-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-commenting-o {
+  --fa: "\f4ad";
+}
+
+.fa.fa-houzz {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-vimeo {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-vimeo {
+  --fa: "\f27d";
+}
+
+.fa.fa-black-tie {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-fonticons {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-reddit-alien {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-edge {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-credit-card-alt {
+  --fa: "\f09d";
+}
+
+.fa.fa-codiepie {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-modx {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-fort-awesome {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-usb {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-product-hunt {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-mixcloud {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-scribd {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-pause-circle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-pause-circle-o {
+  --fa: "\f28b";
+}
+
+.fa.fa-stop-circle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-stop-circle-o {
+  --fa: "\f28d";
+}
+
+.fa.fa-bluetooth {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-bluetooth-b {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-gitlab {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wpbeginner {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wpforms {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-envira {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wheelchair-alt {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wheelchair-alt {
+  --fa: "\f368";
+}
+
+.fa.fa-question-circle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-question-circle-o {
+  --fa: "\f059";
+}
+
+.fa.fa-volume-control-phone {
+  --fa: "\f2a0";
+}
+
+.fa.fa-asl-interpreting {
+  --fa: "\f2a3";
+}
+
+.fa.fa-deafness {
+  --fa: "\f2a4";
+}
+
+.fa.fa-hard-of-hearing {
+  --fa: "\f2a4";
+}
+
+.fa.fa-glide {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-glide-g {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-signing {
+  --fa: "\f2a7";
+}
+
+.fa.fa-viadeo {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-viadeo-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-viadeo-square {
+  --fa: "\f2aa";
+}
+
+.fa.fa-snapchat {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-snapchat-ghost {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-snapchat-ghost {
+  --fa: "\f2ab";
+}
+
+.fa.fa-snapchat-square {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-snapchat-square {
+  --fa: "\f2ad";
+}
+
+.fa.fa-pied-piper {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-first-order {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-yoast {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-themeisle {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus-official {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus-official {
+  --fa: "\f2b3";
+}
+
+.fa.fa-google-plus-circle {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-google-plus-circle {
+  --fa: "\f2b3";
+}
+
+.fa.fa-font-awesome {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-fa {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-fa {
+  --fa: "\f2b4";
+}
+
+.fa.fa-handshake-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-handshake-o {
+  --fa: "\f2b5";
+}
+
+.fa.fa-envelope-open-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-envelope-open-o {
+  --fa: "\f2b6";
+}
+
+.fa.fa-linode {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-address-book-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-address-book-o {
+  --fa: "\f2b9";
+}
+
+.fa.fa-vcard {
+  --fa: "\f2bb";
+}
+
+.fa.fa-address-card-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-address-card-o {
+  --fa: "\f2bb";
+}
+
+.fa.fa-vcard-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-vcard-o {
+  --fa: "\f2bb";
+}
+
+.fa.fa-user-circle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-user-circle-o {
+  --fa: "\f2bd";
+}
+
+.fa.fa-user-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-user-o {
+  --fa: "\f007";
+}
+
+.fa.fa-id-badge {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-drivers-license {
+  --fa: "\f2c2";
+}
+
+.fa.fa-id-card-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-id-card-o {
+  --fa: "\f2c2";
+}
+
+.fa.fa-drivers-license-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-drivers-license-o {
+  --fa: "\f2c2";
+}
+
+.fa.fa-quora {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-free-code-camp {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-telegram {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-thermometer-4 {
+  --fa: "\f2c7";
+}
+
+.fa.fa-thermometer {
+  --fa: "\f2c7";
+}
+
+.fa.fa-thermometer-3 {
+  --fa: "\f2c8";
+}
+
+.fa.fa-thermometer-2 {
+  --fa: "\f2c9";
+}
+
+.fa.fa-thermometer-1 {
+  --fa: "\f2ca";
+}
+
+.fa.fa-thermometer-0 {
+  --fa: "\f2cb";
+}
+
+.fa.fa-bathtub {
+  --fa: "\f2cd";
+}
+
+.fa.fa-s15 {
+  --fa: "\f2cd";
+}
+
+.fa.fa-window-maximize {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-window-restore {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-times-rectangle {
+  --fa: "\f410";
+}
+
+.fa.fa-window-close-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-window-close-o {
+  --fa: "\f410";
+}
+
+.fa.fa-times-rectangle-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-times-rectangle-o {
+  --fa: "\f410";
+}
+
+.fa.fa-bandcamp {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-grav {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-etsy {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-imdb {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-ravelry {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-eercast {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-eercast {
+  --fa: "\f2da";
+}
+
+.fa.fa-snowflake-o {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+}
+
+.fa.fa-snowflake-o {
+  --fa: "\f2dc";
+}
+
+.fa.fa-superpowers {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-wpexplorer {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
+}
+
+.fa.fa-meetup {
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 400;
 }
 
 * {
