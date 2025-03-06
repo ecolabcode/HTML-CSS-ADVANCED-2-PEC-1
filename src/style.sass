@@ -2,16 +2,10 @@ $primary-color: #5d4037
 $secondary-color: #f4f4f4
 $text-color: #333
 $default-padding: 1rem
-$fa-font-path: "../fonts" !default
 
-@use '../../../../node_modules/animate.css/animate.compat.css'
-@use '../../../../node_modules/bootstrap/scss/bootstrap'
-@use '../../../../node_modules/normalize.css/normalize.css'
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome'
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/regular'
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/solid'
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/brands'
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims'
+@use '../../node_modules/animate.css/animate' as *;
+@use '../../node_modules/bootstrap/scss/bootstrap' as *;
+@use '../../node_modules/normalize.css/normalize' as *;
 
 =responsive-font-size($size)
   font-size: $size
