@@ -2,7 +2,7 @@
 $primary-color: #5d4037
 $secondary-color: #f4f4f4
 $text-color: #333
-$default-padding: 1rem
+$default-padding: 16px
 
 /* Imports / Use */
 @use '../../node_modules/animate.css/animate' as *
@@ -14,6 +14,17 @@ $default-padding: 1rem
   font-size: $size
   @media (max-width: 600px)
     font-size: $size * 0.8
+
+/* Functions */
+@function rem($pixels)
+  $base-font-size: 16px
+  @return $pixels / $base-font-size * 1rem
+
+/* Mixins */
+@mixin responsive-padding($padding)
+  padding: rem($padding)
+  @media (max-width: 600px)
+    padding: rem($padding * 0.8)
 
 /* Estilo global */
 *
@@ -31,7 +42,7 @@ body
 .header
   background-color: $primary-color
   color: #fff
-  padding: $default-padding 0
+  @include responsive-padding($default-padding)
   text-align: center
 
 .header__title
@@ -40,24 +51,24 @@ body
 /* main block */
 .main
   max-width: 800px
-  margin: 2*$default-padding auto
-  padding: 0 $default-padding
+  margin: 2 * rem($default-padding) auto
+  padding: 0 rem($default-padding)
 
 .main__section
-  margin-bottom: 2*$default-padding
+  margin-bottom: 2 * rem($default-padding)
 
 .main__section-title
   +responsive-font-size(2rem) /* responsive font size mixin */
   color: $primary-color
-  margin-bottom: $default-padding
+  margin-bottom: rem($default-padding)
 
 .main__section-list
   list-style-type: none
-  padding-left: $default-padding
+  padding-left: rem($default-padding)
 
 .main__section-list-item
-  margin-bottom: 0.5*$default-padding
-  padding-left: $default-padding
+  margin-bottom: 0.5 * rem($default-padding)
+  padding-left: rem($default-padding)
   position: relative
   +responsive-font-size(1rem) /*responsive font size mixin */
 
@@ -75,8 +86,8 @@ body
 .footer
   background-color: $primary-color
   color: #fff
+  @include responsive-padding($default-padding)
   text-align: center
-  padding: $default-padding 0
   position: page
   width: 100%
   bottom: 0

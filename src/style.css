@@ -15861,6 +15861,8 @@ template {
 }
 
 /* Mixin y responsive media query */
+/* Functions */
+/* Mixins */
 /* Estilo global */
 * {
   margin: 0;
@@ -15879,8 +15881,13 @@ body {
 .header {
   background-color: #5d4037;
   color: #fff;
-  padding: 1rem 0;
+  padding: 1rem;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 0.8rem;
+  }
 }
 
 .header__title {
@@ -15947,11 +15954,16 @@ body {
 .footer {
   background-color: #5d4037;
   color: #fff;
+  padding: 1rem;
   text-align: center;
-  padding: 1rem 0;
   position: page;
   width: 100%;
   bottom: 0;
+}
+@media (max-width: 600px) {
+  .footer {
+    padding: 0.8rem;
+  }
 }
 .footer p {
   font-size: 1rem;
